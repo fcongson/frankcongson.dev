@@ -1,17 +1,21 @@
 <template>
-  <img alt="Frank Congson logo" src="./assets/logo.svg" width="128" height="128" />
-  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-  <HelloWorld msg="> frankcongson.dev waiting to sprout 🌱 _" />
+  <img
+    alt="Frank Congson logo"
+    src="./assets/logo.svg"
+    width="128"
+    height="128"
+  />
+  <Sprout />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import Sprout from "./components/Sprout.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
+    Sprout,
   },
 });
 </script>
@@ -26,7 +30,7 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #111111;
   margin-top: 60px;
 }
 </style>
