@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h2>> frankcongson.dev</h2>
-    <h2>> waiting to sprout 🌱</h2>
-    <h2>> _</h2>
+    <p>> frankcongson.dev</p>
+    <p>> waiting to sprout 🌱</p>
+    <p>> _</p>
   </div>
 </template>
 
@@ -11,5 +11,8 @@ div {
   width: fit-content;
   text-align: left;
   margin: 0 auto;
+}
+p {
+  font-size: 1.5rem;
 }
 </style>
