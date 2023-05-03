@@ -1,17 +1,19 @@
+@import url("@fcongson/lagom-tokens/build/css/_variables.core.css");
+
 @font-face {
   font-family: "silkamono";
   src: url("./assets/silkamono-regular-webfont.woff2") format("woff2");
 }
 
 :root {
-  font-family: "silkamono", Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  font-family: "silkamono", "Montserrat", Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #ededed;
-  background-color: #111111;
+  color: var(--lagom-colors-grey-lighter40);
+  background-color: var(--lagom-colors-black);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,14 +23,15 @@
 }
 
 a {
+  color: var(--lagom-colors-grey-lighter40);
   font-weight: 600;
   text-decoration: none;
   padding-bottom: 4px;
-  border-bottom: 2px solid #cacfc9;
+  border-bottom: 2px solid var(--lagom-colors-olive-darker20);
   transition: border-bottom 200ms ease-in-out;
 }
 a:hover {
-  border-bottom: 2px solid #222222;
+  border-bottom: 2px solid var(--lagom-colors-olive-lighter40);
 }
 
 body {
@@ -61,16 +64,16 @@ h3 {
   line-height: 29px;
 }
 
-#app {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
-    color: #222222;
-    background-color: #ffffff;
+    color: var(--lagom-colors-grey-darker40);
+    background-color: var(--lagom-colors-white);
+  }
+  a {
+    color: var(--lagom-colors-grey-darker40);
+    border-bottom: 2px solid var(--lagom-colors-olive-lighter40);
+  }
+  a:hover {
+    border-bottom: 2px solid var(--lagom-colors-grey-darker40);
   }
 }
