@@ -12,13 +12,12 @@ import Intro from "./components/Intro.vue";
 
 <style>
 #app {
-  margin: 0 auto;
-  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 main {
   flex-grow: 1;
+  margin: 0 auto;
 }
 </style>

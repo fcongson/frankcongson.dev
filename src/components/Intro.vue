@@ -1,21 +1,24 @@
 <script setup lang="ts">
-import Sprout from "./Sprout.vue";
+import intro from "../../content/intro.json";
 </script>
 
 <template>
   <section>
-    <img
-      alt="Frank Congson logo"
-      src="../assets/logo.svg"
-      width="128"
-      height="128"
-    />
-    <Sprout />
+    <div class="container">
+      <h1>{{ intro.headline }}</h1>
+      <h2>{{ intro.tagline }}</h2>
+      <p>lorem ipsum dolor sit amet.</p>
+    </div>
   </section>
 </template>
 
 <style scoped>
 section {
-  margin-top: 4rem;
+  width: 100vw;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.container {
+  margin: 0 1rem;
 }
 </style>
