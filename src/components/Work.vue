@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import work from "../../content/work.json";
+import TypewriterHeading from "./TypewriterHeading.vue";
 
 const formatDate = (date: string) =>
   new Date(date).toLocaleString("en-US", {
@@ -11,7 +12,8 @@ const formatDate = (date: string) =>
 <template>
   <section>
     <div class="container">
-      <h2>{{ work.title }}</h2>
+      <!-- <h2>{{ work.title }}</h2> -->
+      <TypewriterHeading v-bind:title="work.title" level="2" />
       <div v-for="experience in work.experiences" class="experience">
         <h3>
           {{ experience.jobTitle }} @
