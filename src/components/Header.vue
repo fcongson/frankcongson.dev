@@ -43,9 +43,6 @@ header {
   font-size: 0.75rem;
 }
 section {
-  width: 100vw;
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
