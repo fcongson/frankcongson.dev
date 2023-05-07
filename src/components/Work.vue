@@ -12,7 +12,7 @@ const formatDate = (date: string) =>
   <section>
     <div class="container">
       <h2>{{ work.title }}</h2>
-      <div v-for="experience in work.experiences">
+      <div v-for="experience in work.experiences" class="experience">
         <h3>
           {{ experience.jobTitle }} @
           <a v-bind:href="experience.companyWebsite">{{
@@ -27,3 +27,9 @@ const formatDate = (date: string) =>
     </div>
   </section>
 </template>
+
+<style scoped>
+.experience {
+  margin: 4rem auto;
+}
+</style>
