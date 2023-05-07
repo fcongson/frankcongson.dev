@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import intro from "../../content/intro.json";
+import TypewriterHeading from "./TypewriterHeading.vue";
 </script>
 
 <template>
   <section>
     <div class="container">
-      <h1>{{ intro.headline }}</h1>
-      <h2>{{ intro.tagline }}</h2>
+      <TypewriterHeading v-bind:title="intro.headline" level="1" />
+      <TypewriterHeading v-bind:title="intro.tagline" level="2" />
     </div>
   </section>
   <section>
@@ -15,14 +16,3 @@ import intro from "../../content/intro.json";
     </div>
   </section>
 </template>
-
-<style scoped>
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "silkamono", monospace;
-}
-</style>
