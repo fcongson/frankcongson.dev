@@ -13,13 +13,16 @@ import TypewriterHeading from "./TypewriterHeading.vue";
   <div class="full-width-bg">
     <section>
       <div class="container description">
-        <p v-for="text in intro.description"><span v-html="text" /></p>
+        <p v-for="text in intro.description" v-html="text" />
       </div>
     </section>
   </div>
 </template>
 
 <style scoped>
+.container:first-of-type {
+  margin-top: 6rem;
+}
 .full-width-bg {
   width: 100vw;
   background-color: var(--color-container-background);

@@ -32,7 +32,7 @@ const formatDate = (date: string) =>
           <p>
             {{ formatDate(experience.startDate) }} -
             {{
-              experience.current ? "current" : formatDate(experience.endDate)
+              experience.current ? "Current" : formatDate(experience.endDate)
             }}
           </p>
         </div>
@@ -47,7 +47,12 @@ const formatDate = (date: string) =>
   letter-spacing: 0.25rem;
 }
 .experience-group {
+  margin: 4rem auto;
   border-bottom: 0.5px solid var(--color-border);
+}
+
+.experience-group:last-of-type {
+  border-bottom: none;
 }
 .experience {
   margin: 4rem auto;
