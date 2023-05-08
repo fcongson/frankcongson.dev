@@ -6,14 +6,21 @@
 }
 
 :root {
+  --color-foreground: var(--lagom-colors-grey-lighter40);
+  --color-background: var(--lagom-colors-black);
+  --color-container-background: var(--lagom-colors-olive-darker20);
+  --color-border: var(--lagom-colors-olive-darker20);
+  --color-border-on-hover: var(--lagom-colors-olive-lighter40);
+  --color-border-on-container-background: var(--lagom-colors-grey-darker20);
+
   font-family: "Montserrat", Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
   line-height: 1.7;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: var(--lagom-colors-grey-lighter40);
-  background-color: var(--lagom-colors-black);
+  color: var(--color-foreground);
+  background-color: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,15 +30,18 @@
 }
 
 a {
-  color: var(--lagom-colors-grey-lighter40);
+  color: var(--color-foreground);
   font-weight: 600;
   text-decoration: none;
-  padding-bottom: 4px;
-  border-bottom: 2px solid var(--lagom-colors-olive-darker20);
-  transition: border-bottom 200ms ease-in-out;
+  padding-bottom: 0.25em;
+  border-bottom: 0.125em solid var(--color-border);
+  transition-property: padding-bottom, border-bottom;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
 }
 a:hover {
-  border-bottom: 2px solid var(--lagom-colors-olive-lighter40);
+  padding-bottom: 0.125em;
+  border-bottom: 0.25em solid var(--color-border-on-hover);
 }
 
 body {
@@ -66,14 +76,11 @@ h3 {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: var(--lagom-colors-grey-darker40);
-    background-color: var(--lagom-colors-white);
-  }
-  a {
-    color: var(--lagom-colors-grey-darker40);
-    border-bottom: 2px solid var(--lagom-colors-olive-lighter40);
-  }
-  a:hover {
-    border-bottom: 2px solid var(--lagom-colors-grey-darker40);
+    --color-foreground: var(--lagom-colors-grey-darker40);
+    --color-background: var(--lagom-colors-white);
+    --color-container-background: var(--lagom-colors-olive-lighter40);
+    --color-border: var(--lagom-colors-olive-lighter40);
+    --color-border-on-hover: var(--lagom-colors-grey-darker20);
+    --color-border-on-container-background: var(--lagom-colors-olive-lighter20);
   }
 }

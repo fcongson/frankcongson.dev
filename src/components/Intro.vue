@@ -10,9 +10,30 @@ import TypewriterHeading from "./TypewriterHeading.vue";
       <TypewriterHeading v-bind:title="intro.tagline" level="2" />
     </div>
   </section>
-  <section>
-    <div class="container">
-      <p>{{ intro.description }}</p>
-    </div>
-  </section>
+  <div class="full-width-bg">
+    <section>
+      <div class="container description">
+        <p v-for="text in intro.description"><span v-html="text" /></p>
+      </div>
+    </section>
+  </div>
 </template>
+
+<style scoped>
+.full-width-bg {
+  width: 100vw;
+  background-color: var(--color-container-background);
+}
+.container.description {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 4rem 0;
+}
+
+.description ::v-deep a {
+  border-bottom-color: var(--color-border-on-container-background);
+}
+.description ::v-deep a:hover {
+  border-bottom-color: var(--color-border-on-hover);
+}
+</style>

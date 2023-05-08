@@ -1,5 +1,9 @@
 {
   "headline": "Design Systems Engineer",
-  "tagline": "Scaling designs and the teams that create them.",
-  "description": "A Design Systems Professional with a passion for leadership, mentoring, and building scalable designs. Applying over 10 years of diverse full stack and web development experience to a design systems focus."
+  "tagline": "Empowering Design Excellence at Scale: Unleashing Creativity, Enabling Collaboration, and Amplifying Impact",
+  "description": [
+    "Hello 👋 I'm <a href=\"https://frankcongson.com\">Frank</a>.",
+    "I'm a <a href=\"https://linkedin.com/in/fcongson/\">Design Systems Engineer</a>. That tagline above ☝️ is brought to you by ChatGPT 4 🤖.",
+    "I build <a href=\"https://lagom-ui.netlify.app/\">Design Systems</a> with <a href=\"https://github.com/fcongson/lagom-tokens\">Design Tokens</a>. I love scaling design and applying systems thinking. I also love building teams through mentoring and leadership.", "Arriving at Design Systems wasn't a straightforward journey. See how I got there below 👇."
+  ]
 }

@@ -1,71 +1,86 @@
 {
   "title": "Work Experience",
-  "experiences": [
+  "experienceGroups": [
     {
-      "startDate": "2021-01",
-      "endDate": "",
-      "current": true,
-      "jobTitle": "Senior Engineer, Design Systems",
-      "company": "Xero",
-      "companyWebsite": "https://www.xero.com/nz/",
-      "companyLogo": "",
-      "location": "Wellington, New Zealand",
-      "details": ""
+      "subtitle": "The \"Design Systems\" Era",
+      "experiences": [
+        {
+          "startDate": "2021-01",
+          "endDate": "",
+          "current": true,
+          "jobTitle": "Senior Engineer, Design Systems",
+          "company": "Xero",
+          "companyWebsite": "https://www.xero.com/nz/",
+          "companyLogo": "",
+          "location": "Wellington, New Zealand",
+          "details": ""
+        },
+        {
+          "startDate": "2018-04",
+          "endDate": "2021-01",
+          "current": false,
+          "jobTitle": "Senior Developer",
+          "company": "Jarden",
+          "companyWebsite": "https://www.jarden.co.nz/",
+          "companyLogo": "",
+          "location": "Wellington, New Zealand",
+          "details": ""
+        }
+      ]
     },
     {
-      "startDate": "2018-04",
-      "endDate": "2021-01",
-      "current": false,
-      "jobTitle": "Senior Developer",
-      "company": "Jarden",
-      "companyWebsite": "https://www.jarden.co.nz/",
-      "companyLogo": "",
-      "location": "Wellington, New Zealand",
-      "details": ""
+      "subtitle": "The \"Full Stack\" Era",
+      "experiences": [
+        {
+          "startDate": "2016-03",
+          "endDate": "2017-09",
+          "current": false,
+          "jobTitle": "Application Developer",
+          "company": "Starbucks Corporation",
+          "companyWebsite": "https://www.starbucks.com/",
+          "companyLogo": "",
+          "location": "Seattle, WA, United States",
+          "details": ""
+        },
+        {
+          "startDate": "2014-05",
+          "endDate": "2016-03",
+          "current": false,
+          "jobTitle": "Software Developer",
+          "company": "Sila Solutions Group",
+          "companyWebsite": "https://silasg.com/",
+          "companyLogo": "",
+          "location": "Seattle, WA, United States",
+          "details": ""
+        }
+      ]
     },
     {
-      "startDate": "2016-03",
-      "endDate": "2017-09",
-      "current": false,
-      "jobTitle": "Application Developer",
-      "company": "Starbucks Corporation",
-      "companyWebsite": "https://www.starbucks.com/",
-      "companyLogo": "",
-      "location": "Seattle, WA, United States",
-      "details": ""
-    },
-    {
-      "startDate": "2014-05",
-      "endDate": "2016-03",
-      "current": false,
-      "jobTitle": "Software Developer",
-      "company": "Sila Solutions Group",
-      "companyWebsite": "https://silasg.com/",
-      "companyLogo": "",
-      "location": "Seattle, WA, United States",
-      "details": ""
-    },
-    {
-      "startDate": "2012-09",
-      "endDate": "2014-05",
-      "current": false,
-      "jobTitle": "Senior Consultant",
-      "company": "Booz Allen Hamilton",
-      "companyWebsite": "https://www.boozallen.com/",
-      "companyLogo": "",
-      "location": "Washington D.C., United States",
-      "details": ""
-    },
-    {
-      "startDate": "2009-08",
-      "endDate": "2012-09",
-      "current": false,
-      "jobTitle": "Software Engineer",
-      "company": "Lockheed Martin Corporation",
-      "companyWebsite": "https://www.lockheedmartin.com/",
-      "companyLogo": "",
-      "location": "Washington D.C., United States",
-      "details": ""
+      "subtitle": "Prologue: Finding My Path",
+      "experiences": [
+        {
+          "startDate": "2012-09",
+          "endDate": "2014-05",
+          "current": false,
+          "jobTitle": "Senior Consultant",
+          "company": "Booz Allen Hamilton",
+          "companyWebsite": "https://www.boozallen.com/",
+          "companyLogo": "",
+          "location": "Washington D.C., United States",
+          "details": ""
+        },
+        {
+          "startDate": "2009-08",
+          "endDate": "2012-09",
+          "current": false,
+          "jobTitle": "Software Engineer",
+          "company": "Lockheed Martin Corporation",
+          "companyWebsite": "https://www.lockheedmartin.com/",
+          "companyLogo": "",
+          "location": "Washington D.C., United States",
+          "details": ""
+        }
+      ]
     }
   ]
 }
