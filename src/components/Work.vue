@@ -12,7 +12,6 @@ const formatDate = (date: string) =>
 <template>
   <section>
     <div class="container">
-      <!-- <h2>{{ work.title }}</h2> -->
       <TypewriterHeading v-bind:title="work.title" level="2" />
       <div
         v-for="experienceGroup in work.experienceGroups"

@@ -8,6 +8,7 @@
 :root {
   --color-foreground: var(--lagom-colors-grey-lighter40);
   --color-background: var(--lagom-colors-black);
+  --color-section-background: var(--lagom-colors-grey-darker40);
   --color-container-background: var(--lagom-colors-olive-darker20);
   --color-border: var(--lagom-colors-olive-darker20);
   --color-border-on-hover: var(--lagom-colors-olive-lighter40);
@@ -78,6 +79,7 @@ h3 {
   :root {
     --color-foreground: var(--lagom-colors-grey-darker40);
     --color-background: var(--lagom-colors-white);
+    --color-section-background: var(--lagom-colors-grey-lighter40);
     --color-container-background: var(--lagom-colors-olive-lighter40);
     --color-border: var(--lagom-colors-olive-lighter40);
     --color-border-on-hover: var(--lagom-colors-grey-darker20);

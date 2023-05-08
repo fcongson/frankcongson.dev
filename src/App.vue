@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
 import Intro from "./components/Intro.vue";
+import Projects from "./components/Projects.vue";
 import Work from "./components/Work.vue";
 </script>
 
@@ -9,7 +11,9 @@ import Work from "./components/Work.vue";
   <main>
     <Intro />
     <Work />
+    <Projects />
   </main>
+  <Footer />
 </template>
 
 <style>
@@ -29,5 +33,8 @@ section {
 }
 .container {
   margin: 8rem 1rem;
+}
+.container:last-of-type {
+  margin-bottom: 0;
 }
 </style>
