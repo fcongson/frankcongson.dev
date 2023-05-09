@@ -7,7 +7,11 @@ import TypewriterHeading from "./TypewriterHeading.vue";
   <section>
     <div class="container">
       <TypewriterHeading v-bind:title="intro.headline" level="1" />
-      <TypewriterHeading v-bind:title="intro.tagline" level="2" />
+      <TypewriterHeading
+        v-bind:title="intro.tagline"
+        level="2"
+        v-bind:typeTime="1800"
+      />
     </div>
   </section>
   <div class="full-width-bg">

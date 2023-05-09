@@ -8,7 +8,11 @@ import TypewriterHeading from "./TypewriterHeading.vue";
     <section>
       <div class="container">
         <TypewriterHeading v-bind:title="projects.title" level="2" />
-        <TypewriterHeading v-bind:title="projects.description" level="3" />
+        <TypewriterHeading
+          v-bind:title="projects.description"
+          level="3"
+          v-bind:typeTime="1800"
+        />
       </div>
     </section>
   </div>

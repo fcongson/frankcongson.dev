@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { name, info, contacts } from "../../content/header.json";
+import { name, info, contacts } from "../../content/contact.json";
 </script>
 
 <template>

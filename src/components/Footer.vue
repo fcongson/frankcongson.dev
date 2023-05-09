@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { contacts } from "../../content/contact.json";
+</script>
+
 <template>
   <footer>
     <div id="logo">
@@ -8,19 +12,50 @@
         height="32"
       />
     </div>
+    <div id="contact">
+      <ul>
+        <li v-for="contact in contacts">
+          <a v-bind:href="contact.url">{{ contact.name }}</a>
+        </li>
+      </ul>
+    </div>
   </footer>
 </template>
 
 <style scoped>
-div#logo {
-  background-color: var(--lagom-colors-grey-darker40);
-  height: 128px;
+footer {
+  font-size: 0.75rem;
   width: 100vw;
-  min-width: 100vw;
-  padding: 0;
-  text-align: center;
+  border-top: 0.5px solid var(--lagom-colors-grey-darker20);
+  background-color: var(--lagom-colors-grey-darker40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+div#logo {
+  height: 128px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+div#contact {
+  margin-bottom: 4rem;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin: 0 2rem;
+}
+a {
+  color: var(--lagom-colors-grey-lighter40);
+  border-bottom-color: var(--lagom-colors-olive-darker20);
+}
+a:hover {
+  border-bottom-color: var(--lagom-colors-olive-lighter40);
 }
 </style>

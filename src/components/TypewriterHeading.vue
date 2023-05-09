@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  props: ["title", "level"],
+  props: ["title", "level", "typeDelay", "typeTime"],
   setup() {
     let typed = "";
     return {
@@ -8,10 +8,15 @@ export default {
     };
   },
   mounted(this) {
+    const { title, typeDelay, typeTime } = this.$props;
+    let interval = typeDelay ?? 70;
+    if (typeTime) {
+      interval = typeTime / title.length;
+    }
     window.setInterval(() => {
-      this.typed = this.$props.title.slice(0, this.typed.length + 1);
+      this.typed = title.slice(0, this.typed.length + 1);
       this.$forceUpdate();
-    }, 70);
+    }, interval);
   },
 };
 </script>
