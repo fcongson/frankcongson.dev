@@ -13,16 +13,34 @@ export default {
     if (typeTime) {
       interval = typeTime / title.length;
     }
-    window.setInterval(() => {
-      this.typed = title.slice(0, this.typed.length + 1);
-      this.$forceUpdate();
-    }, interval);
+    const initTyping = () =>
+      window.setInterval(() => {
+        this.typed = title.slice(0, this.typed.length + 1);
+        this.$forceUpdate();
+      }, interval);
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            initTyping();
+            observer.unobserve(this.$refs.target as Element);
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 1.0,
+      }
+    );
+
+    observer.observe(this.$refs.target as Element);
   },
 };
 </script>
 
 <template>
-  <div class="typewriter">
+  <div class="typewriter" ref="target">
     <div class="hidden">
       <h1 v-if="level === '1'">{{ title }}<span class="cursor">_</span></h1>
       <h2 v-if="level === '2'">{{ title }}<span class="cursor">_</span></h2>
