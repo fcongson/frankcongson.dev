@@ -17,7 +17,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
           class="project-group"
           v-for="projectGroup in projects.projectGroups"
         >
-          <h3>{{ projectGroup.subtitle }}</h3>
+          <h3 class="project-subtitle">{{ projectGroup.subtitle }}</h3>
           <div v-for="project in projectGroup.projects" class="project">
             <h4>{{ project.name }}</h4>
           </div>
@@ -34,5 +34,20 @@ import TypewriterHeading from "../TypewriterHeading.vue";
 }
 .container {
   padding: 8rem 0;
+}
+.project-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+.project-group {
+  margin: 4rem auto;
+  border-bottom: 0.5px solid var(--color-border);
+}
+
+.project-group:last-of-type {
+  border-bottom: none;
+}
+.project {
+  margin: 4rem auto;
 }
 </style>

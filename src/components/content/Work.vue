@@ -13,6 +13,11 @@ const formatDate = (date: string) =>
   <section>
     <div class="container">
       <TypewriterHeading v-bind:title="work.title" level="2" />
+      <TypewriterHeading
+        v-bind:title="work.description"
+        level="3"
+        v-bind:typeTime="1800"
+      />
       <div
         v-for="experienceGroup in work.experienceGroups"
         class="experience-group"
