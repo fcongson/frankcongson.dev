@@ -11,6 +11,7 @@ import TypewriterHeading from "./TypewriterHeading.vue";
         v-bind:title="intro.tagline"
         level="2"
         v-bind:typeTime="1800"
+        v-bind:visibleThreshold="0.25"
       />
     </div>
   </section>
@@ -33,7 +34,6 @@ import TypewriterHeading from "./TypewriterHeading.vue";
 }
 .container.description {
   font-size: 1.25rem;
-  font-weight: 600;
   padding: 4rem 0;
 }
 

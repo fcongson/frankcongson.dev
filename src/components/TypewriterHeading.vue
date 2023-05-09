@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  props: ["title", "level", "typeDelay", "typeTime"],
+  props: ["title", "level", "typeDelay", "typeTime", "visibleThreshold"],
   setup() {
     let typed = "";
     return {
@@ -8,8 +8,12 @@ export default {
     };
   },
   mounted(this) {
-    const { title, typeDelay, typeTime } = this.$props;
-    let interval = typeDelay ?? 70;
+    const { title, typeDelay, typeTime, visibleThreshold } = this.$props;
+
+    const DEFAULT_TYPEDELAY = 70;
+    const DEFAULT_THRESHOLD = 0.7;
+
+    let interval = typeDelay ?? DEFAULT_TYPEDELAY;
     if (typeTime) {
       interval = typeTime / title.length;
     }
@@ -30,7 +34,7 @@ export default {
       },
       {
         root: null,
-        threshold: 1.0,
+        threshold: visibleThreshold ?? DEFAULT_THRESHOLD,
       }
     );
 

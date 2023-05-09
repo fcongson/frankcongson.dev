@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { name, info, contacts } from "../../content/contact.json";
+import { name, info, socials } from "../../content/contact.json";
 </script>
 
 <template>
@@ -19,10 +19,10 @@ import { name, info, contacts } from "../../content/contact.json";
         </p>
         <p v-for="item in info">{{ item }}</p>
       </div>
-      <div id="contact">
+      <div id="socials">
         <ul>
-          <li v-for="contact in contacts">
-            <a v-bind:href="contact.url">{{ contact.name }}</a>
+          <li v-for="social in socials">
+            <a v-bind:href="social.url">{{ social.name }}</a>
           </li>
         </ul>
       </div>
@@ -51,7 +51,7 @@ section {
   text-align: left;
   margin: 0 1rem;
 }
-#contact {
+#socials {
   text-align: right;
   margin: 0 1rem;
 }
