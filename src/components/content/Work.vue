@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import work from "../../content/work.json";
-import TypewriterHeading from "./TypewriterHeading.vue";
+import work from "../../../content/work.json";
+import TypewriterHeading from "../TypewriterHeading.vue";
 
 const formatDate = (date: string) =>
   new Date(date).toLocaleString("en-US", {

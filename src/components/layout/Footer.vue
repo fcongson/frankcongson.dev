@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { email, socials } from "../../content/contact.json";
+import { email, socials } from "../../../content/contact.json";
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import { email, socials } from "../../content/contact.json";
     <div id="logo">
       <img
         alt="Frank Congson logo"
-        src="../assets/logo.svg"
+        src="../../assets/logo.svg"
         width="32"
         height="32"
       />

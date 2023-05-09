@@ -1,4 +1,43 @@
 {
   "title": "Projects",
-  "description": "Lorem ipsum dolor sit amet."
+  "description": "Lorem ipsum dolor sit amet.",
+  "projectGroups": [
+    {
+      "subtitle": "Lagom Design System",
+      "description": "",
+      "projects": [
+        {
+          "name": "Lagom UI",
+          "url": "",
+          "description": ""
+        },
+        {
+          "name": "Lagom Tokens",
+          "url": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "subtitle": "Lagom Applied",
+      "description": "",
+      "projects": [
+        {
+          "name": "FrankCongson.com",
+          "url": "",
+          "description": ""
+        },
+        {
+          "name": "HeyThereEverywhere.com",
+          "url": "",
+          "description": ""
+        },
+        {
+          "name": "FrankCongson.dev",
+          "url": "",
+          "description": ""
+        }
+      ]
+    }
+  ]
 }

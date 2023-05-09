@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import intro from "../../content/intro.json";
-import TypewriterHeading from "./TypewriterHeading.vue";
+import intro from "../../../content/intro.json";
+import TypewriterHeading from "../TypewriterHeading.vue";
 </script>
 
 <template>

@@ -3,6 +3,7 @@
   "experienceGroups": [
     {
       "subtitle": "The \"Design Systems\" Era 🌲",
+      "description": "",
       "experiences": [
         {
           "startDate": "2021-01",
@@ -30,6 +31,7 @@
     },
     {
       "subtitle": "The \"Full Stack\" Era 🪴",
+      "description": "",
       "experiences": [
         {
           "startDate": "2016-03",
@@ -57,6 +59,7 @@
     },
     {
       "subtitle": "Prologue: Finding My Path 🌱",
+      "description": "",
       "experiences": [
         {
           "startDate": "2012-09",
