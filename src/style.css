@@ -19,7 +19,7 @@
 
   --color-border: var(--lagom-colors-olive-darker20);
   --color-border-on-hover: var(--lagom-colors-olive-lighter40);
-  --color-border-on-hover-on-color-bg: var(--color-foreground);
+  --color-border-on-hover-on-color-bg: var(--lagom-colors-grey-lighter20);
 
   --color-border-on-color-bg: var(--lagom-colors-grey-darker20);
   --color-border-on-navy-bg: var(--lagom-colors-navy-darker10);
@@ -99,6 +99,7 @@ h3 {
 
     --color-border: var(--lagom-colors-olive-lighter40);
     --color-border-on-hover: var(--lagom-colors-grey-darker20);
+    --color-border-on-hover-on-color-bg: var(--lagom-colors-grey-darker20);
 
     --color-border-on-color-bg: var(--lagom-colors-olive-lighter20);
     --color-border-on-navy-bg: var(--lagom-colors-navy-lighter20);
