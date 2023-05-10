@@ -87,7 +87,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "silkamono", monospace;
+  font-family: var(--font-family-monospace);
 }
 @keyframes cursor-blink {
   from {

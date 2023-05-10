@@ -19,7 +19,9 @@ import TypewriterHeading from "../TypewriterHeading.vue";
         >
           <h3 class="project-subtitle">{{ projectGroup.subtitle }}</h3>
           <div v-for="project in projectGroup.projects" class="project">
-            <h4>{{ project.name }}</h4>
+            <h4>
+              <a v-bind:href="project.url">{{ project.name }}</a>
+            </h4>
           </div>
         </div>
       </div>
@@ -33,6 +35,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
   background-color: var(--color-section-background);
 }
 .container {
+  margin: 0 1rem;
   padding: 8rem 0;
 }
 .project-subtitle {

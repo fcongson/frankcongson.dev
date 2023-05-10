@@ -6,16 +6,28 @@
 }
 
 :root {
+  --font-family-sansserif: "Montserrat", Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
+  --font-family-monospace: "silkamono", monospace;
+
   --color-foreground: var(--lagom-colors-grey-lighter40);
   --color-background: var(--lagom-colors-black);
+
   --color-section-background: var(--lagom-colors-grey-darker40);
-  --color-container-background: var(--lagom-colors-olive-darker20);
+  --color-section-background-olive: var(--lagom-colors-olive-darker20);
+  --color-section-background-navy: var(--lagom-colors-navy-darker20);
+
   --color-border: var(--lagom-colors-olive-darker20);
   --color-border-on-hover: var(--lagom-colors-olive-lighter40);
-  --color-border-on-container-background: var(--lagom-colors-grey-darker20);
 
-  font-family: "Montserrat", Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  --color-border-on-color-bg: var(--lagom-colors-grey-darker20);
+  --color-border-on-navy-bg: var(--lagom-colors-navy-darker10);
+  --color-border-on-olive-bg: var(--lagom-colors-olive-darker10);
+
+  --color-container-background: var(--color-section-background-olive);
+  --color-border-on-container-background: var(--color-border-on-color-bg);
+
+  font-family: var(--font-family-sansserif);
   line-height: 1.7;
   font-weight: 400;
 
@@ -79,10 +91,16 @@ h3 {
   :root {
     --color-foreground: var(--lagom-colors-grey-darker40);
     --color-background: var(--lagom-colors-white);
+
     --color-section-background: var(--lagom-colors-grey-lighter40);
-    --color-container-background: var(--lagom-colors-olive-lighter40);
+    --color-section-background-olive: var(--lagom-colors-olive-lighter40);
+    --color-section-background-navy: var(--lagom-colors-navy-lighter40);
+
     --color-border: var(--lagom-colors-olive-lighter40);
     --color-border-on-hover: var(--lagom-colors-grey-darker20);
-    --color-border-on-container-background: var(--lagom-colors-olive-lighter20);
+
+    --color-border-on-color-bg: var(--lagom-colors-olive-lighter20);
+    --color-border-on-navy-bg: var(--lagom-colors-navy-lighter20);
+    --color-border-on-olive-bg: var(--lagom-colors-olive-lighter20);
   }
 }

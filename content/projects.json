@@ -8,12 +8,12 @@
       "projects": [
         {
           "name": "Lagom UI",
-          "url": "",
+          "url": "https://lagom-ui.netlify.app/",
           "description": ""
         },
         {
           "name": "Lagom Tokens",
-          "url": "",
+          "url": "https://github.com/fcongson/lagom-tokens/pkgs/npm/lagom-tokens",
           "description": ""
         }
       ]
@@ -24,17 +24,17 @@
       "projects": [
         {
           "name": "FrankCongson.com",
-          "url": "",
+          "url": "https://frankcongson.com",
           "description": ""
         },
         {
           "name": "HeyThereEverywhere.com",
-          "url": "",
+          "url": "https://heythereeverywhere.com",
           "description": ""
         },
         {
           "name": "FrankCongson.dev",
-          "url": "",
+          "url": "https://frankcongson.dev",
           "description": ""
         }
       ]

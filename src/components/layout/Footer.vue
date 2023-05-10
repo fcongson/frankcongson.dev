@@ -29,7 +29,7 @@ import { email, socials } from "../../../content/contact.json";
 footer {
   font-size: 0.75rem;
   width: 100vw;
-  border-top: 0.5px solid var(--lagom-colors-grey-darker20);
+  /* border-top: 0.5px solid var(--lagom-colors-grey-darker20); */
   background-color: var(--lagom-colors-grey-darker40);
   display: flex;
   flex-direction: column;

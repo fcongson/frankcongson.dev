@@ -46,6 +46,10 @@ const formatDate = (date: string) =>
 </template>
 
 <style scoped>
+.container {
+  margin: 0 1rem;
+  padding: 8rem 0;
+}
 .experience-subtitle {
   text-transform: uppercase;
   letter-spacing: 0.25rem;

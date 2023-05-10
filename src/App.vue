@@ -2,6 +2,7 @@
 import Intro from "./components/content/Intro.vue";
 import Projects from "./components/content/Projects.vue";
 import Work from "./components/content/Work.vue";
+import Writing from "./components/content/Writing.vue";
 import Footer from "./components/layout/Footer.vue";
 import Header from "./components/layout/Header.vue";
 </script>
@@ -12,6 +13,7 @@ import Header from "./components/layout/Header.vue";
     <Intro />
     <Work />
     <Projects />
+    <Writing />
   </main>
   <Footer />
 </template>
