@@ -54,6 +54,6 @@ li {
   border-bottom-color: var(--color-border-on-navy-bg);
 }
 ::v-deep a:hover {
-  border-bottom-color: var(--color-border-on-hover);
+  border-bottom-color: var(--color-border-on-hover-on-color-bg);
 }
 </style>
