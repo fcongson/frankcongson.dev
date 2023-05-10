@@ -50,10 +50,10 @@ li {
   margin: 4rem auto;
   font-size: 1.25rem;
 }
-::v-deep a {
+:deep(a) {
   border-bottom-color: var(--color-border-on-navy-bg);
 }
-::v-deep a:hover {
+:deep(a:hover) {
   border-bottom-color: var(--color-border-on-hover-on-color-bg);
 }
 </style>

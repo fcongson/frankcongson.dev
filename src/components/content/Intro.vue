@@ -37,10 +37,10 @@ import TypewriterHeading from "../TypewriterHeading.vue";
   padding: 4rem 0;
 }
 
-.description ::v-deep a {
+.description :deep(a) {
   border-bottom-color: var(--color-border-on-container-background);
 }
-.description ::v-deep a:hover {
+.description :deep(a:hover) {
   border-bottom-color: var(--color-border-on-hover);
 }
 </style>
