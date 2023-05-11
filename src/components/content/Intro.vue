@@ -33,6 +33,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
   background-color: var(--color-container-background);
 }
 .container.description {
+  font-family: var(--font-family-serif);
   font-size: 1.25rem;
   padding: 4rem 0;
 }

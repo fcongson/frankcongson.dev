@@ -6,8 +6,9 @@
 }
 
 :root {
-  --font-family-sansserif: "Montserrat", Inter, system-ui, Avenir, Helvetica,
+  --font-family-sans-serif: "Montserrat", Inter, system-ui, Avenir, Helvetica,
     Arial, sans-serif;
+  --font-family-serif: "Domine", serif;
   --font-family-monospace: "silkamono", monospace;
 
   --color-foreground: var(--lagom-colors-grey-lighter40);
@@ -28,7 +29,7 @@
   --color-container-background: var(--color-section-background-olive);
   --color-border-on-container-background: var(--color-border-on-color-bg);
 
-  font-family: var(--font-family-sansserif);
+  font-family: var(--font-family-sans-serif);
   line-height: 1.7;
   font-weight: 400;
 
