@@ -35,13 +35,15 @@ import TypewriterHeading from "../TypewriterHeading.vue";
 ol {
   list-style: none;
   counter-reset: section;
+  padding: 0;
 }
 ol li:before {
   counter-increment: section;
   content: counter(section);
   font-family: var(--font-family-monospace);
   font-size: 1.25rem;
-  padding-right: 2rem;
+  position: absolute;
+  left: 0;
 }
 ol li:nth-child(-n + 9):before {
   content: "0" counter(section);
@@ -49,6 +51,8 @@ ol li:nth-child(-n + 9):before {
 li {
   margin: 4rem auto;
   font-size: 1.25rem;
+  position: relative;
+  padding-left: 4rem;
 }
 :deep(a) {
   border-bottom-color: var(--color-border-on-navy-bg);
