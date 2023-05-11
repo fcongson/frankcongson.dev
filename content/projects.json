@@ -1,0 +1,43 @@
+{
+  "title": "Projects",
+  "description": "Design Systems passion beyond the profession.",
+  "projectGroups": [
+    {
+      "subtitle": "Lagom Design System 💫",
+      "description": "",
+      "projects": [
+        {
+          "name": "Lagom UI",
+          "url": "https://lagom-ui.netlify.app/",
+          "description": ""
+        },
+        {
+          "name": "Lagom Tokens",
+          "url": "https://github.com/fcongson/lagom-tokens/pkgs/npm/lagom-tokens",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "subtitle": "Multi Brand ✨",
+      "description": "",
+      "projects": [
+        {
+          "name": "FrankCongson.com",
+          "url": "https://frankcongson.com",
+          "description": ""
+        },
+        {
+          "name": "HeyThereEverywhere.com",
+          "url": "https://heythereeverywhere.com",
+          "description": ""
+        },
+        {
+          "name": "FrankCongson.dev",
+          "url": "https://frankcongson.dev",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

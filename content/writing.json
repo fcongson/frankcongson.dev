@@ -1,0 +1,22 @@
+{
+  "title": "Writing",
+  "description": "Articles I've written about my Design Systems journey.",
+  "articles": [
+    {
+      "title": "Creating a Component Library",
+      "url": "https://frankcongson.com/blog/creating-a-component-library"
+    },
+    {
+      "title": "Design Systems Thinking",
+      "url": "https://frankcongson.com/blog/design-systems-thinking"
+    },
+    {
+      "title": "Component Design In Figma",
+      "url": "https://frankcongson.com/blog/component-design-in-figma"
+    },
+    {
+      "title": "Design Tokens To Dark Mode",
+      "url": "https://frankcongson.com/blog/design-tokens-to-dark-mode"
+    }
+  ]
+}

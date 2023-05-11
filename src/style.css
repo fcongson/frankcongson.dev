@@ -1,17 +1,40 @@
+@import url("@fcongson/lagom-tokens/build/css/_variables.core.css");
+
 @font-face {
   font-family: "silkamono";
   src: url("./assets/silkamono-regular-webfont.woff2") format("woff2");
 }
 
 :root {
-  font-family: "silkamono", Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  line-height: 1.5;
+  --font-family-sansserif: "Montserrat", Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
+  --font-family-monospace: "silkamono", monospace;
+
+  --color-foreground: var(--lagom-colors-grey-lighter40);
+  --color-background: var(--lagom-colors-black);
+
+  --color-section-background: var(--lagom-colors-grey-darker40);
+  --color-section-background-olive: var(--lagom-colors-olive-darker20);
+  --color-section-background-navy: var(--lagom-colors-navy-darker20);
+
+  --color-border: var(--lagom-colors-olive-darker20);
+  --color-border-on-hover: var(--lagom-colors-olive-lighter40);
+  --color-border-on-hover-on-color-bg: var(--lagom-colors-grey-lighter20);
+
+  --color-border-on-color-bg: var(--lagom-colors-grey-darker20);
+  --color-border-on-navy-bg: var(--lagom-colors-navy-darker10);
+  --color-border-on-olive-bg: var(--lagom-colors-olive-darker10);
+
+  --color-container-background: var(--color-section-background-olive);
+  --color-border-on-container-background: var(--color-border-on-color-bg);
+
+  font-family: var(--font-family-sansserif);
+  line-height: 1.7;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #ededed;
-  background-color: #111111;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,14 +44,18 @@
 }
 
 a {
+  color: var(--color-foreground);
   font-weight: 600;
   text-decoration: none;
-  padding-bottom: 4px;
-  border-bottom: 2px solid #cacfc9;
-  transition: border-bottom 200ms ease-in-out;
+  padding-bottom: 0.25em;
+  border-bottom: 0.125em solid var(--color-border);
+  transition-property: padding-bottom, border-bottom;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
 }
 a:hover {
-  border-bottom: 2px solid #222222;
+  padding-bottom: 0.125em;
+  border-bottom: 0.25em solid var(--color-border-on-hover);
 }
 
 body {
@@ -61,16 +88,21 @@ h3 {
   line-height: 29px;
 }
 
-#app {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
-    color: #222222;
-    background-color: #ffffff;
+    --color-foreground: var(--lagom-colors-grey-darker40);
+    --color-background: var(--lagom-colors-white);
+
+    --color-section-background: var(--lagom-colors-grey-lighter40);
+    --color-section-background-olive: var(--lagom-colors-olive-lighter40);
+    --color-section-background-navy: var(--lagom-colors-navy-lighter40);
+
+    --color-border: var(--lagom-colors-olive-lighter40);
+    --color-border-on-hover: var(--lagom-colors-grey-darker20);
+    --color-border-on-hover-on-color-bg: var(--lagom-colors-grey-darker20);
+
+    --color-border-on-color-bg: var(--lagom-colors-olive-lighter20);
+    --color-border-on-navy-bg: var(--lagom-colors-navy-lighter20);
+    --color-border-on-olive-bg: var(--lagom-colors-olive-lighter20);
   }
 }
