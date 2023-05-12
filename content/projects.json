@@ -4,38 +4,38 @@
   "projectGroups": [
     {
       "subtitle": "Lagom Design System 💫",
-      "description": "",
+      "description": "I wanted a safe space to experiment with component architecture, composition, and codified, scalable design decisions. That is what sparked my creation of Lagom Design System.",
       "projects": [
         {
           "name": "Lagom UI",
           "url": "https://lagom-ui.netlify.app/",
-          "description": ""
+          "description": "This is the React Component Library that I built and use in my online brands. I've added theming support to allow for multi brand usage."
         },
         {
           "name": "Lagom Tokens",
           "url": "https://github.com/fcongson/lagom-tokens/pkgs/npm/lagom-tokens",
-          "description": ""
+          "description": "This is a consolidation of the design decisions I've chosen to support my brands. It provides sensible defaults and feeds into Lagom UI to keep the decisions consistent."
         }
       ]
     },
     {
       "subtitle": "Multi Brand ✨",
-      "description": "",
+      "description": "Multi Brand implementations are fascinating. Blending DRY (Don't Repeat Yourself) principles of Software Development with scalability in design, preventing getting boxed into a corner! Below are my multi brand experiments using Lagom Design System across my own brands.",
       "projects": [
+        {
+          "name": "FrankCongson.dev",
+          "url": "https://frankcongson.dev",
+          "description": "My Dev & Design Systems focused brand. This site that you're currently looking at. It uses Vue.js rather than React, meaning it doesn't use Lagom UI (my React Component Library). But it's still on brand due to the use of Lagom Tokens."
+        },
         {
           "name": "FrankCongson.com",
           "url": "https://frankcongson.com",
-          "description": ""
+          "description": "This is my main brand and the driving force behind Lagom Design System. It uses both Lagom UI and Lagom Tokens."
         },
         {
           "name": "HeyThereEverywhere.com",
           "url": "https://heythereeverywhere.com",
-          "description": ""
-        },
-        {
-          "name": "FrankCongson.dev",
-          "url": "https://frankcongson.dev",
-          "description": ""
+          "description": "A Travel Blog focused brand that I created with my wife. I built the site using Lagom UI with custom theming to have its unique look while still fitting within the FrankCongson.com brand."
         }
       ]
     }
