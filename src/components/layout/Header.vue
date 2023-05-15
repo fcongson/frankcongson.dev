@@ -40,7 +40,7 @@ div#logo {
   text-align: center;
 }
 header {
-  font-size: 0.75rem;
+  font-size: max(0.75rem, 12px);
 }
 section {
   display: flex;

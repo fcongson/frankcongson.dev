@@ -30,7 +30,7 @@ main {
 }
 section {
   width: 100vw;
-  max-width: 800px;
+  max-width: var(--layout-max-width);
   margin: 0 auto;
 }
 .container {

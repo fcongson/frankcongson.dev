@@ -27,7 +27,7 @@ import { email, socials } from "../../../content/contact.json";
 
 <style scoped>
 footer {
-  font-size: 0.75rem;
+  font-size: max(0.75rem, 12px);
   width: 100vw;
   /* border-top: 0.5px solid var(--lagom-colors-grey-darker20); */
   background-color: var(--lagom-colors-grey-darker40);
@@ -43,16 +43,17 @@ div#logo {
   justify-content: center;
 }
 div#socials {
+  width: 100%;
+  max-width: 400px;
   margin-bottom: 4rem;
 }
 ul {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   list-style-type: none;
-  padding: 0;
+  padding: 0 1rem;
   margin: 0;
-}
-li {
-  margin: 0 2rem;
 }
 a {
   color: var(--lagom-colors-grey-lighter40);

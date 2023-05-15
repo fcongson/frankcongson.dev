@@ -71,7 +71,8 @@ export default {
 .typewriter .hidden,
 .typewriter .visible {
   grid-area: 1 / 1;
-  width: 100%;
+  max-width: var(--layout-max-width);
+  width: calc(100vw - 2rem);
 }
 .typewriter .hidden {
   visibility: hidden;
@@ -88,6 +89,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-monospace);
+  overflow-wrap: break-word;
 }
 @keyframes cursor-blink {
   from {

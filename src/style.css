@@ -11,6 +11,8 @@
   --font-family-serif: "Domine", serif;
   --font-family-monospace: "silkamono", monospace;
 
+  --layout-max-width: 800px;
+
   --color-foreground: var(--lagom-colors-grey-lighter40);
   --color-background: var(--lagom-colors-black);
 
@@ -29,6 +31,7 @@
   --color-container-background: var(--color-section-background-olive);
   --color-border-on-container-background: var(--color-border-on-color-bg);
 
+  font-size: 16px;
   font-family: var(--font-family-sans-serif);
   line-height: 1.7;
   font-weight: 400;
@@ -42,6 +45,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+@media screen and (max-width: 568px) {
+  :root {
+    font-size: 14px;
+  }
 }
 
 a {
@@ -63,7 +72,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
 }
 
@@ -77,16 +85,16 @@ h6 {
   margin-bottom: 1rem;
 }
 h1 {
-  font-size: 54px;
-  line-height: 66px;
+  font-size: 3.375rem;
+  line-height: 4.125rem;
 }
 h2 {
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
 }
 h3 {
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
 }
 
 @media (prefers-color-scheme: light) {
