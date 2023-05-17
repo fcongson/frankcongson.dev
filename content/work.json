@@ -4,7 +4,9 @@
   "experienceGroups": [
     {
       "subtitle": "The \"Design Systems\" Era 🌲",
-      "description": "",
+      "description": [
+        "I found my passion here. Design Systems is where I belong. It perfectly blends my Full Stack distributed systems thinking with scaling visual designs 🙌. There's a lot to grow into within the space. Design Tokens are what I'm diving deeper into at the moment."
+      ],
       "experiences": [
         {
           "startDate": "2021-01",
@@ -32,7 +34,10 @@
     },
     {
       "subtitle": "The \"Full Stack\" Era 🪴",
-      "description": "",
+      "description": [
+        "I learned I wanted to be closer to the end user and create the products they interact with. This narrowed my scope to product facing Full Stack roles.",
+        "As I spent time in the Full Stack space, I gravitated towards the visual elements and building UIs that scale. This is what led me down the path of Design Systems."
+      ],
       "experiences": [
         {
           "startDate": "2016-03",
@@ -60,7 +65,9 @@
     },
     {
       "subtitle": "Prologue: Finding My Path 🌱",
-      "description": "",
+      "description": [
+        "As a fresh grad out of University, I had no idea of the software development landscape ahead of me. Getting into contracting and consulting in this early stage allowed me to attain a wide array of project experience."
+      ],
       "experiences": [
         {
           "startDate": "2012-09",

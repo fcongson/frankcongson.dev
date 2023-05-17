@@ -22,23 +22,32 @@ const formatDate = (date: string) =>
         v-for="experienceGroup in work.experienceGroups"
         class="experience-group"
       >
-        <h3 class="experience-subtitle">{{ experienceGroup.subtitle }}</h3>
-        <div
-          v-for="experience in experienceGroup.experiences"
-          class="experience"
-        >
-          <h4>
-            {{ experience.jobTitle }} @
-            <a v-bind:href="experience.companyWebsite">{{
-              experience.company
-            }}</a>
-          </h4>
-          <p>
-            {{ formatDate(experience.startDate) }} -
-            {{
-              experience.current ? "Current" : formatDate(experience.endDate)
-            }}
+        <h3 class="experience-group-subtitle">
+          {{ experienceGroup.subtitle }}
+        </h3>
+        <div class="experience-group-description">
+          <p v-for="paragraph in experienceGroup.description">
+            {{ paragraph }}
           </p>
+        </div>
+        <div class="experiences">
+          <div
+            v-for="experience in experienceGroup.experiences"
+            class="experience"
+          >
+            <h4>
+              {{ experience.jobTitle }}<br />@
+              <a v-bind:href="experience.companyWebsite">{{
+                experience.company
+              }}</a>
+            </h4>
+            <p>
+              {{ formatDate(experience.startDate) }} -
+              {{
+                experience.current ? "Current" : formatDate(experience.endDate)
+              }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -50,7 +59,7 @@ const formatDate = (date: string) =>
   margin: 0 1rem;
   padding: 8rem 0;
 }
-.experience-subtitle {
+.experience-group-subtitle {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
 }
@@ -61,8 +70,26 @@ const formatDate = (date: string) =>
 
 .experience-group:last-of-type {
   border-bottom: none;
+  margin-bottom: 0;
 }
-.experience {
+.experience-group:last-of-type .experiences {
+  margin-bottom: 0;
+}
+.experiences {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  text-align: center;
+  margin: 4rem 0;
+}
+.experience-group-description {
   margin: 4rem auto;
+  font-family: var(--font-family-serif);
+  line-height: 2;
+}
+@media screen and (max-width: 568px) {
+  .experiences {
+    flex-direction: column;
+  }
 }
 </style>

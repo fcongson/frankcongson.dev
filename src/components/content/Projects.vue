@@ -60,5 +60,6 @@ import TypewriterHeading from "../TypewriterHeading.vue";
 }
 p.project-description {
   font-family: var(--font-family-serif);
+  line-height: 2;
 }
 </style>

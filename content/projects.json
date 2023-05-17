@@ -9,18 +9,18 @@
         {
           "name": "Lagom UI",
           "url": "https://lagom-ui.netlify.app/",
-          "description": "This is the React Component Library that I built and use in my online brands. I've added theming support to allow for multi brand usage."
+          "description": "This is the React Component Library that I have built. I use this library in my online brands and have included theming support allowing for multi brand usage."
         },
         {
           "name": "Lagom Tokens",
           "url": "https://github.com/fcongson/lagom-tokens/pkgs/npm/lagom-tokens",
-          "description": "This is a consolidation of the design decisions I've chosen to support my brands. It provides sensible defaults and feeds into Lagom UI to keep the decisions consistent."
+          "description": "This is a consolidation of the design decisions to support my brands. It provides sensible defaults and feeds into Lagom UI to keep the decisions consistent."
         }
       ]
     },
     {
       "subtitle": "Multi Brand ✨",
-      "description": "Multi Brand implementations are fascinating. Blending DRY (Don't Repeat Yourself) principles of Software Development with scalability in design, preventing getting boxed into a corner! Below are my multi brand experiments using Lagom Design System across my own brands.",
+      "description": "Multi Brand implementations are fascinating. Blending DRY (Don't Repeat Yourself) principles of Software Development with scalability in design, preventing getting boxed into a corner! Below are my multi brand experiments using Lagom Design System across my brands.",
       "projects": [
         {
           "name": "FrankCongson.dev",
@@ -30,7 +30,7 @@
         {
           "name": "FrankCongson.com",
           "url": "https://frankcongson.com",
-          "description": "This is my main brand and the driving force behind Lagom Design System. It uses both Lagom UI and Lagom Tokens."
+          "description": "My primary brand and the driving force behind the creation and growth of Lagom Design System. It uses both Lagom UI and Lagom Tokens."
         },
         {
           "name": "HeyThereEverywhere.com",
