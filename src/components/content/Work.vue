@@ -82,6 +82,9 @@ const formatDate = (date: string) =>
   text-align: center;
   margin: 4rem 0;
 }
+.experience {
+  flex: 1;
+}
 .experience-group-description {
   margin: 4rem auto;
   font-family: var(--font-family-serif);
