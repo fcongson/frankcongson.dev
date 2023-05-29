@@ -1,4 +1,4 @@
-@import url("@fcongson/lagom-tokens/build/css/_variables.core.css");
+@import url("@fcongson/lagom-tokens/css/variables/_core.css");
 
 @font-face {
   font-family: "silkamono";
@@ -13,20 +13,20 @@
 
   --layout-max-width: 800px;
 
-  --color-foreground: var(--lagom-colors-grey-lighter40);
-  --color-background: var(--lagom-colors-black);
+  --color-foreground: var(--lagom-core-colors-grey-lighter40);
+  --color-background: var(--lagom-core-colors-black);
 
-  --color-section-background: var(--lagom-colors-grey-darker40);
-  --color-section-background-olive: var(--lagom-colors-olive-darker20);
-  --color-section-background-navy: var(--lagom-colors-navy-darker20);
+  --color-section-background: var(--lagom-core-colors-grey-darker40);
+  --color-section-background-olive: var(--lagom-core-colors-olive-darker20);
+  --color-section-background-navy: var(--lagom-core-colors-navy-darker20);
 
-  --color-border: var(--lagom-colors-olive-darker20);
-  --color-border-on-hover: var(--lagom-colors-olive-lighter40);
-  --color-border-on-hover-on-color-bg: var(--lagom-colors-grey-lighter20);
+  --color-border: var(--lagom-core-colors-olive-darker20);
+  --color-border-on-hover: var(--lagom-core-colors-olive-lighter40);
+  --color-border-on-hover-on-color-bg: var(--lagom-core-colors-grey-lighter20);
 
-  --color-border-on-color-bg: var(--lagom-colors-grey-darker20);
-  --color-border-on-navy-bg: var(--lagom-colors-navy-darker10);
-  --color-border-on-olive-bg: var(--lagom-colors-olive-darker10);
+  --color-border-on-color-bg: var(--lagom-core-colors-grey-darker20);
+  --color-border-on-navy-bg: var(--lagom-core-colors-navy-darker10);
+  --color-border-on-olive-bg: var(--lagom-core-colors-olive-darker10);
 
   --color-container-background: var(--color-section-background-olive);
   --color-border-on-container-background: var(--color-border-on-color-bg);
@@ -99,19 +99,19 @@ h3 {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-foreground: var(--lagom-colors-grey-darker40);
-    --color-background: var(--lagom-colors-white);
+    --color-foreground: var(--lagom-core-colors-grey-darker40);
+    --color-background: var(--lagom-core-colors-white);
 
-    --color-section-background: var(--lagom-colors-grey-lighter40);
-    --color-section-background-olive: var(--lagom-colors-olive-lighter40);
-    --color-section-background-navy: var(--lagom-colors-navy-lighter40);
+    --color-section-background: var(--lagom-core-colors-grey-lighter40);
+    --color-section-background-olive: var(--lagom-core-colors-olive-lighter40);
+    --color-section-background-navy: var(--lagom-core-colors-navy-lighter40);
 
-    --color-border: var(--lagom-colors-olive-lighter40);
-    --color-border-on-hover: var(--lagom-colors-grey-darker20);
-    --color-border-on-hover-on-color-bg: var(--lagom-colors-grey-darker20);
+    --color-border: var(--lagom-core-colors-olive-lighter40);
+    --color-border-on-hover: var(--lagom-core-colors-grey-darker20);
+    --color-border-on-hover-on-color-bg: var(--lagom-core-colors-grey-darker20);
 
-    --color-border-on-color-bg: var(--lagom-colors-olive-lighter20);
-    --color-border-on-navy-bg: var(--lagom-colors-navy-lighter20);
-    --color-border-on-olive-bg: var(--lagom-colors-olive-lighter20);
+    --color-border-on-color-bg: var(--lagom-core-colors-olive-lighter20);
+    --color-border-on-navy-bg: var(--lagom-core-colors-navy-lighter20);
+    --color-border-on-olive-bg: var(--lagom-core-colors-olive-lighter20);
   }
 }

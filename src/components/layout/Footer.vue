@@ -29,8 +29,8 @@ import { email, socials } from "../../../content/contact.json";
 footer {
   font-size: max(0.75rem, 12px);
   width: 100vw;
-  /* border-top: 0.5px solid var(--lagom-colors-grey-darker20); */
-  background-color: var(--lagom-colors-grey-darker40);
+  /* border-top: 0.5px solid var(--lagom-core-colors-grey-darker20); */
+  background-color: var(--lagom-core-colors-grey-darker40);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,10 +56,10 @@ ul {
   margin: 0;
 }
 a {
-  color: var(--lagom-colors-grey-lighter40);
-  border-bottom-color: var(--lagom-colors-olive-darker20);
+  color: var(--lagom-core-colors-grey-lighter40);
+  border-bottom-color: var(--lagom-core-colors-olive-darker20);
 }
 a:hover {
-  border-bottom-color: var(--lagom-colors-olive-lighter40);
+  border-bottom-color: var(--lagom-core-colors-olive-lighter40);
 }
 </style>

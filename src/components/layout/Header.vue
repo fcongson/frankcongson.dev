@@ -32,7 +32,7 @@ import { name, info, socials } from "../../../content/contact.json";
 
 <style scoped>
 div#logo {
-  background-color: var(--lagom-colors-grey-darker40);
+  background-color: var(--lagom-core-colors-grey-darker40);
   height: 32px;
   width: 100vw;
   min-width: 100vw;
