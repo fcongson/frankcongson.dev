@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { email, socials } from "../../../content/contact.json";
+import { email, site, socials } from "../../../content/contact.json";
 </script>
 
 <template>
@@ -19,6 +19,9 @@ import { email, socials } from "../../../content/contact.json";
         </li>
         <li v-for="social in socials">
           <a v-bind:href="social.url">{{ social.name }}</a>
+        </li>
+        <li>
+          <a v-bind:href="site">.COM</a>
         </li>
       </ul>
     </div>
