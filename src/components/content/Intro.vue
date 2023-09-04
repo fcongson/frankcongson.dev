@@ -17,8 +17,17 @@ import TypewriterHeading from "../TypewriterHeading.vue";
   </section>
   <div class="full-width-bg">
     <section>
-      <div class="container description">
-        <p v-for="text in intro.description" v-html="text" />
+      <div class="container">
+        <div class="description">
+          <p v-for="text in intro.description" v-html="text" />
+        </div>
+        <div class="nav">
+          <ol>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#writing">Writing</a></li>
+          </ol>
+        </div>
       </div>
     </section>
   </div>
@@ -32,16 +41,52 @@ import TypewriterHeading from "../TypewriterHeading.vue";
   width: 100vw;
   background-color: var(--color-container-background);
 }
-.container.description {
-  font-family: var(--font-family-serif);
-  font-size: 1.25rem;
+
+.container {
   padding: 4rem 0;
 }
 
-.description :deep(a) {
+.container .description {
+  font-family: var(--font-family-serif);
+  font-size: 1.25rem;
+  margin: 4rem 0;
+}
+
+.container :deep(a) {
   border-bottom-color: var(--color-border-on-container-background);
 }
-.description :deep(a:hover) {
+.container :deep(a:hover) {
   border-bottom-color: var(--color-border-on-hover);
+}
+
+.container .nav {
+  margin: 4rem 0;
+}
+.container .nav ol {
+  list-style: none;
+  counter-reset: section;
+  padding: 0;
+}
+.container .nav ol li:before {
+  counter-increment: section;
+  content: counter(section);
+  font-family: var(--font-family-monospace);
+  font-size: 1.25rem;
+  position: absolute;
+  left: 0;
+}
+.container .nav ol li:nth-child(-n + 9):before {
+  content: "0" counter(section);
+}
+.container .nav li {
+  margin: 1rem auto;
+  font-size: 1.25rem;
+  position: relative;
+  padding-left: 4rem;
+}
+
+.nav a {
+  font-family: var(--font-family-monospace);
+  font-size: 1.25rem;
 }
 </style>

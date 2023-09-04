@@ -6,7 +6,10 @@ import TypewriterHeading from "../TypewriterHeading.vue";
 <template>
   <div class="full-width-bg">
     <section>
-      <div class="container">
+      <div
+        class="container"
+        v-bind:id="`${projects.title.toLowerCase().replace(' ', '-')}`"
+      >
         <TypewriterHeading v-bind:title="projects.title" level="2" />
         <TypewriterHeading
           v-bind:title="projects.description"

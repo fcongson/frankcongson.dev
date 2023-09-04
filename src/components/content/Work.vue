@@ -11,7 +11,10 @@ const formatDate = (date: string) =>
 
 <template>
   <section>
-    <div class="container">
+    <div
+      class="container"
+      v-bind:id="`${work.title.toLowerCase().replace(' ', '-')}`"
+    >
       <TypewriterHeading v-bind:title="work.title" level="2" />
       <TypewriterHeading
         v-bind:title="work.description"
