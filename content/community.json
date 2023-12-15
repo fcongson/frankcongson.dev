@@ -1,0 +1,18 @@
+{
+  "title": "Community",
+  "description": "Giving back to the Design Systems community.",
+  "projects": [
+    {
+      "name": "DesignSystems.media",
+      "url": "https://designsystems.media/",
+      "image": "designsystemsmedia.png",
+      "description": "This project began as a fun hack to gather Design Systems content. Now, it's a fully-fledged site! A curated collection of Design Systems content that will benefit the community to learn more about all that is Design Systems. I co-created this with <a href='https://twitter.com/JoshDesignNz'>@JoshDesignNZ</a> and <a href='https://chat.openai.com/'>ChatGPT</a>. We made <a href='https://designsystems.media/'>DesignSystems.media</a> for us, and now it's for all."
+    },
+    {
+      "name": "Design Systems Community Chapter New Zealand",
+      "url": "https://designsystems.community/chapters/new-zealand/",
+      "image": "dscc-nzl-logo.png",
+      "description": "There's a lot of growth potential for Design Systems in New Zealand, where I live. I'm one of the New Zealand Chapter Leads growing the community and creating a space for Design Systems people to share what they know and learn from each other."
+    }
+  ]
+}

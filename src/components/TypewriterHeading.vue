@@ -35,7 +35,7 @@ export default {
       {
         root: null,
         threshold: visibleThreshold ?? DEFAULT_THRESHOLD,
-      }
+      },
     );
 
     observer.observe(this.$refs.target as Element);
@@ -90,6 +90,7 @@ h5,
 h6 {
   font-family: var(--font-family-monospace);
   overflow-wrap: break-word;
+  text-wrap: unset;
 }
 @keyframes cursor-blink {
   from {

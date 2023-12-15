@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Community from "./components/content/Community.vue";
 import Intro from "./components/content/Intro.vue";
 import Projects from "./components/content/Projects.vue";
 import Work from "./components/content/Work.vue";
@@ -14,6 +15,7 @@ import Header from "./components/layout/Header.vue";
     <Work />
     <Projects />
     <Writing />
+    <Community />
   </main>
   <Footer />
 </template>
@@ -38,5 +40,16 @@ section {
 }
 .container:last-of-type {
   margin-bottom: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
 }
 </style>

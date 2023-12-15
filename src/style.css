@@ -19,14 +19,16 @@
   --color-section-background: var(--lagom-core-colors-grey-darker40);
   --color-section-background-olive: var(--lagom-core-colors-olive-darker20);
   --color-section-background-navy: var(--lagom-core-colors-navy-darker20);
+  --color-section-background-violet: var(--lagom-core-colors-violet-darker10);
 
-  --color-border: var(--lagom-core-colors-olive-darker20);
+  --color-border: var(--lagom-core-colors-olive-base);
   --color-border-on-hover: var(--lagom-core-colors-olive-lighter40);
   --color-border-on-hover-on-color-bg: var(--lagom-core-colors-grey-lighter20);
 
-  --color-border-on-color-bg: var(--lagom-core-colors-grey-darker20);
-  --color-border-on-navy-bg: var(--lagom-core-colors-navy-darker10);
-  --color-border-on-olive-bg: var(--lagom-core-colors-olive-darker10);
+  --color-border-on-color-bg: var(--lagom-core-colors-olive-lighter20);
+  --color-border-on-navy-bg: var(--lagom-core-colors-navy-lighter20);
+  --color-border-on-olive-bg: var(--lagom-core-colors-olive-lighter20);
+  --color-border-on-violet-bg: var(--lagom-core-colors-violet-lighter20);
 
   --color-container-background: var(--color-section-background-olive);
   --color-border-on-container-background: var(--color-border-on-color-bg);
@@ -57,14 +59,12 @@ a {
   color: var(--color-foreground);
   font-weight: 600;
   text-decoration: none;
-  padding-bottom: 0.25em;
   border-bottom: 0.125em solid var(--color-border);
-  transition-property: padding-bottom, border-bottom;
+  transition-property: border-bottom;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
 a:hover {
-  padding-bottom: 0.125em;
   border-bottom: 0.25em solid var(--color-border-on-hover);
 }
 
@@ -105,6 +105,9 @@ h3 {
     --color-section-background: var(--lagom-core-colors-grey-lighter40);
     --color-section-background-olive: var(--lagom-core-colors-olive-lighter40);
     --color-section-background-navy: var(--lagom-core-colors-navy-lighter40);
+    --color-section-background-violet: var(
+      --lagom-core-colors-violet-lighter40
+    );
 
     --color-border: var(--lagom-core-colors-olive-lighter40);
     --color-border-on-hover: var(--lagom-core-colors-grey-darker20);
@@ -113,5 +116,6 @@ h3 {
     --color-border-on-color-bg: var(--lagom-core-colors-olive-lighter20);
     --color-border-on-navy-bg: var(--lagom-core-colors-navy-lighter20);
     --color-border-on-olive-bg: var(--lagom-core-colors-olive-lighter20);
+    --color-border-on-violet-bg: var(--lagom-core-colors-violet-lighter20);
   }
 }

@@ -26,6 +26,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
             <li><a href="#work-experience">Work Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#writing">Writing</a></li>
+            <li><a href="#community">Community</a></li>
           </ol>
         </div>
       </div>
@@ -71,7 +72,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
   counter-increment: section;
   content: counter(section);
   font-family: var(--font-family-monospace);
-  font-size: 1.25rem;
+  font-size: 2rem;
   position: absolute;
   left: 0;
 }
@@ -80,13 +81,13 @@ import TypewriterHeading from "../TypewriterHeading.vue";
 }
 .container .nav li {
   margin: 1rem auto;
-  font-size: 1.25rem;
+  font-size: 2rem;
   position: relative;
   padding-left: 4rem;
 }
 
 .nav a {
   font-family: var(--font-family-monospace);
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 </style>
