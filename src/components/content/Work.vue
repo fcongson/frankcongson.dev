@@ -37,6 +37,7 @@ const formatDate = (date: string) =>
           <div
             v-for="experience in experienceGroup.experiences"
             class="experience"
+            v-bind:class="{ current: experience.current }"
           >
             <h4>
               {{ experience.jobTitle }}<br />@
@@ -82,11 +83,19 @@ const formatDate = (date: string) =>
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
   margin: 4rem 0;
 }
 .experience {
   flex: 1;
+  min-width: 380px;
+}
+.experience.current {
+  flex-basis: 100%;
+}
+.experience.current h4 {
+  font-size: 1.25rem;
 }
 .experience-group-description {
   margin: 4rem auto;
@@ -96,6 +105,9 @@ const formatDate = (date: string) =>
 @media screen and (max-width: 568px) {
   .experiences {
     flex-direction: column;
+  }
+  .experience {
+    min-width: unset;
   }
 }
 </style>

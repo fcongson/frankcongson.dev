@@ -9,9 +9,20 @@
       ],
       "experiences": [
         {
-          "startDate": "2021-01",
+          "startDate": "2024-01",
           "endDate": "",
           "current": true,
+          "jobTitle": "Lead Engineer, Design Systems",
+          "company": "Xero",
+          "companyWebsite": "https://www.xero.com/nz/",
+          "companyLogo": "",
+          "location": "Wellington, New Zealand",
+          "details": ""
+        },
+        {
+          "startDate": "2021-01",
+          "endDate": "2023-12",
+          "current": false,
           "jobTitle": "Senior Engineer, Design Systems",
           "company": "Xero",
           "companyWebsite": "https://www.xero.com/nz/",
