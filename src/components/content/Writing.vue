@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import writing from "../../../content/writing.json";
 import { slugify } from "../../slugify";
+import SectionLabel from "../blueprint/SectionLabel.vue";
 import TypewriterHeading from "../TypewriterHeading.vue";
 </script>
 
@@ -8,6 +9,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
   <div class="full-width-bg">
     <section>
       <div :id="slugify(writing.title)" class="container">
+        <SectionLabel index="03" :label="slugify(writing.title)" />
         <TypewriterHeading :title="writing.title" :level="2" />
         <TypewriterHeading
           :title="writing.description"

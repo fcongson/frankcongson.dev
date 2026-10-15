@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import projects from "../../../content/projects.json";
 import { slugify } from "../../slugify";
+import Ruler from "../blueprint/Ruler.vue";
+import SectionLabel from "../blueprint/SectionLabel.vue";
 import TypewriterHeading from "../TypewriterHeading.vue";
 </script>
 
@@ -8,6 +10,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
   <div class="full-width-bg">
     <section>
       <div :id="slugify(projects.title)" class="container">
+        <SectionLabel index="02" :label="slugify(projects.title)" />
         <TypewriterHeading :title="projects.title" :level="2" />
         <TypewriterHeading
           :title="projects.description"
@@ -15,7 +18,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
           :type-time="1800"
         />
         <div
-          v-for="projectGroup in projects.projectGroups"
+          v-for="(projectGroup, index) in projects.projectGroups"
           :key="projectGroup.subtitle"
           class="project-group"
         >
@@ -31,6 +34,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
             </h4>
             <p class="project-description" v-html="project.description" />
           </div>
+          <Ruler v-if="index < projects.projectGroups.length - 1" />
         </div>
       </div>
     </section>
@@ -52,11 +56,6 @@ import TypewriterHeading from "../TypewriterHeading.vue";
 }
 .project-group {
   margin: 4rem auto;
-  border-bottom: 0.5px solid var(--color-border);
-}
-
-.project-group:last-of-type {
-  border-bottom: none;
 }
 .project {
   margin: 4rem auto;

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import work from "../../../content/work.json";
 import { slugify } from "../../slugify";
+import Ruler from "../blueprint/Ruler.vue";
+import SectionLabel from "../blueprint/SectionLabel.vue";
 import TypewriterHeading from "../TypewriterHeading.vue";
 
 // TODO: content/work.json has Xero "Senior Engineer" ending 2021-12 and
@@ -16,6 +18,7 @@ const formatDate = (date: string) =>
 <template>
   <section>
     <div :id="slugify(work.title)" class="container">
+      <SectionLabel index="01" :label="slugify(work.title)" />
       <TypewriterHeading :title="work.title" :level="2" />
       <TypewriterHeading
         :title="work.description"
@@ -23,7 +26,7 @@ const formatDate = (date: string) =>
         :type-time="1800"
       />
       <div
-        v-for="experienceGroup in work.experienceGroups"
+        v-for="(experienceGroup, index) in work.experienceGroups"
         :key="experienceGroup.subtitle"
         class="experience-group"
       >
@@ -54,6 +57,7 @@ const formatDate = (date: string) =>
             </p>
           </div>
         </div>
+        <Ruler v-if="index < work.experienceGroups.length - 1" />
       </div>
     </div>
   </section>
@@ -70,11 +74,9 @@ const formatDate = (date: string) =>
 }
 .experience-group {
   margin: 4rem auto;
-  border-bottom: 0.5px solid var(--color-border);
 }
 
 .experience-group:last-of-type {
-  border-bottom: none;
   margin-bottom: 0;
 }
 .experience-group:last-of-type .experiences {

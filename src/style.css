@@ -33,6 +33,14 @@
   --color-container-background: var(--color-section-background-olive);
   --color-border-on-container-background: var(--color-border-on-color-bg);
 
+  --color-blueprint-line: var(--lagom-core-colors-olive-base);
+  --color-blueprint-mark: var(--lagom-core-colors-olive-lighter20);
+  --color-blueprint-grid: color-mix(
+    in srgb,
+    var(--color-blueprint-mark) 34%,
+    transparent
+  );
+
   font-size: 16px;
   font-family: var(--font-family-sans-serif);
   line-height: 1.7;
@@ -117,5 +125,8 @@ h3 {
     --color-border-on-navy-bg: var(--lagom-core-colors-navy-lighter20);
     --color-border-on-olive-bg: var(--lagom-core-colors-olive-lighter20);
     --color-border-on-violet-bg: var(--lagom-core-colors-violet-lighter20);
+
+    --color-blueprint-line: var(--lagom-core-colors-olive-lighter20);
+    --color-blueprint-mark: var(--lagom-core-colors-olive-base);
   }
 }

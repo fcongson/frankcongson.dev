@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import community from "../../../content/community.json";
 import { slugify } from "../../slugify";
+import SectionLabel from "../blueprint/SectionLabel.vue";
 import TypewriterHeading from "../TypewriterHeading.vue";
 </script>
 
@@ -8,6 +9,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
   <div class="full-width-bg">
     <section>
       <div :id="slugify(community.title)" class="container">
+        <SectionLabel index="04" :label="slugify(community.title)" />
         <TypewriterHeading :title="community.title" :level="2" />
         <TypewriterHeading
           :title="community.description"
