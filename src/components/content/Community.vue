@@ -1,27 +1,32 @@
 <script setup lang="ts">
 import community from "../../../content/community.json";
+import { slugify } from "../../slugify";
 import TypewriterHeading from "../TypewriterHeading.vue";
 </script>
 
 <template>
   <div class="full-width-bg">
     <section>
-      <div
-        class="container"
-        v-bind:id="`${community.title.toLowerCase().replace(' ', '-')}`"
-      >
-        <TypewriterHeading v-bind:title="community.title" level="2" />
+      <div :id="slugify(community.title)" class="container">
+        <TypewriterHeading :title="community.title" :level="2" />
         <TypewriterHeading
-          v-bind:title="community.description"
-          level="3"
-          v-bind:typeTime="1800"
+          :title="community.description"
+          :level="3"
+          :type-time="1800"
         />
-        <div v-for="project in community.projects" class="project">
-          <!-- <a v-bind:href="project.url"> -->
-          <img class="project-image" v-bind:src="project.image" />
-          <!-- </a> -->
+        <div
+          v-for="project in community.projects"
+          :key="project.name"
+          class="project"
+        >
+          <img
+            class="project-image"
+            :src="project.image"
+            :alt="project.name"
+            loading="lazy"
+          />
           <h3 class="project-name">
-            <a v-bind:href="project.url">
+            <a :href="project.url">
               {{ project.name }}
             </a>
           </h3>

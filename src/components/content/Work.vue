@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import work from "../../../content/work.json";
+import { slugify } from "../../slugify";
 import TypewriterHeading from "../TypewriterHeading.vue";
 
 const formatDate = (date: string) =>
@@ -11,39 +12,36 @@ const formatDate = (date: string) =>
 
 <template>
   <section>
-    <div
-      class="container"
-      v-bind:id="`${work.title.toLowerCase().replace(' ', '-')}`"
-    >
-      <TypewriterHeading v-bind:title="work.title" level="2" />
+    <div :id="slugify(work.title)" class="container">
+      <TypewriterHeading :title="work.title" :level="2" />
       <TypewriterHeading
-        v-bind:title="work.description"
-        level="3"
-        v-bind:typeTime="1800"
+        :title="work.description"
+        :level="3"
+        :type-time="1800"
       />
       <div
         v-for="experienceGroup in work.experienceGroups"
+        :key="experienceGroup.subtitle"
         class="experience-group"
       >
         <h3 class="experience-group-subtitle">
           {{ experienceGroup.subtitle }}
         </h3>
         <div class="experience-group-description">
-          <p v-for="paragraph in experienceGroup.description">
+          <p v-for="paragraph in experienceGroup.description" :key="paragraph">
             {{ paragraph }}
           </p>
         </div>
         <div class="experiences">
           <div
             v-for="experience in experienceGroup.experiences"
+            :key="`${experience.company}-${experience.startDate}`"
             class="experience"
-            v-bind:class="{ current: experience.current }"
+            :class="{ current: experience.current }"
           >
             <h4>
               {{ experience.jobTitle }}<br />@
-              <a v-bind:href="experience.companyWebsite">{{
-                experience.company
-              }}</a>
+              <a :href="experience.companyWebsite">{{ experience.company }}</a>
             </h4>
             <p>
               {{ formatDate(experience.startDate) }} -

@@ -17,12 +17,12 @@ import { name, info, socials } from "../../../content/contact.json";
         <p>
           <strong>{{ name }}</strong>
         </p>
-        <p v-for="item in info">{{ item }}</p>
+        <p v-for="item in info" :key="item">{{ item }}</p>
       </div>
       <div id="socials">
         <ul>
-          <li v-for="social in socials">
-            <a v-bind:href="social.url">{{ social.name }}</a>
+          <li v-for="social in socials" :key="social.name">
+            <a :href="social.url">{{ social.name }}</a>
           </li>
         </ul>
       </div>

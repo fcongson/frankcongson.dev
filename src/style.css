@@ -6,8 +6,8 @@
 }
 
 :root {
-  --font-family-sans-serif: "Montserrat", Inter, system-ui, Avenir, Helvetica,
-    Arial, sans-serif;
+  --font-family-sans-serif:
+    "Montserrat", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-family-serif: "Domine", serif;
   --font-family-monospace: "silkamono", monospace;
 

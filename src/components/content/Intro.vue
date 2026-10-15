@@ -1,17 +1,27 @@
 <script setup lang="ts">
+import community from "../../../content/community.json";
 import intro from "../../../content/intro.json";
+import projects from "../../../content/projects.json";
+import work from "../../../content/work.json";
+import writing from "../../../content/writing.json";
+import { slugify } from "../../slugify";
 import TypewriterHeading from "../TypewriterHeading.vue";
+
+const sections = [work, projects, writing, community].map(({ title }) => ({
+  title,
+  id: slugify(title),
+}));
 </script>
 
 <template>
   <section>
     <div class="container">
-      <TypewriterHeading v-bind:title="intro.headline" level="1" />
+      <TypewriterHeading :title="intro.headline" :level="1" />
       <TypewriterHeading
-        v-bind:title="intro.tagline"
-        level="2"
-        v-bind:typeTime="1800"
-        v-bind:visibleThreshold="0.25"
+        :title="intro.tagline"
+        :level="2"
+        :type-time="1800"
+        :visible-threshold="0.25"
       />
     </div>
   </section>
@@ -19,14 +29,13 @@ import TypewriterHeading from "../TypewriterHeading.vue";
     <section>
       <div class="container">
         <div class="description">
-          <p v-for="text in intro.description" v-html="text" />
+          <p v-for="text in intro.description" :key="text" v-html="text" />
         </div>
         <div class="nav">
           <ol>
-            <li><a href="#work-experience">Work Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#writing">Writing</a></li>
-            <li><a href="#community">Community</a></li>
+            <li v-for="section in sections" :key="section.id">
+              <a :href="`#${section.id}`">{{ section.title }}</a>
+            </li>
           </ol>
         </div>
       </div>

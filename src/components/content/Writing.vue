@@ -1,24 +1,22 @@
 <script setup lang="ts">
 import writing from "../../../content/writing.json";
+import { slugify } from "../../slugify";
 import TypewriterHeading from "../TypewriterHeading.vue";
 </script>
 
 <template>
   <div class="full-width-bg">
     <section>
-      <div
-        class="container"
-        v-bind:id="`${writing.title.toLowerCase().replace(' ', '-')}`"
-      >
-        <TypewriterHeading v-bind:title="writing.title" level="2" />
+      <div :id="slugify(writing.title)" class="container">
+        <TypewriterHeading :title="writing.title" :level="2" />
         <TypewriterHeading
-          v-bind:title="writing.description"
-          level="3"
-          v-bind:typeTime="1800"
+          :title="writing.description"
+          :level="3"
+          :type-time="1800"
         />
         <ol>
-          <li v-for="article in writing.articles">
-            <a v-bind:href="article.url">{{ article.title }}</a>
+          <li v-for="article in writing.articles" :key="article.url">
+            <a :href="article.url">{{ article.title }}</a>
           </li>
         </ol>
       </div>
