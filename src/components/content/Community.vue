@@ -17,16 +17,21 @@ import TypewriterHeading from "../TypewriterHeading.vue";
           :type-time="1800"
         />
         <div
-          v-for="project in community.projects"
+          v-for="(project, index) in community.projects"
           :key="project.name"
           class="project"
         >
-          <img
-            class="project-image"
-            :src="project.image"
-            :alt="project.name"
-            loading="lazy"
-          />
+          <div class="project-frame">
+            <img
+              class="project-image"
+              :src="project.image"
+              :alt="project.name"
+              loading="lazy"
+            />
+          </div>
+          <p class="project-fig" aria-hidden="true">
+            fig. {{ String(index + 1).padStart(2, "0") }}
+          </p>
           <h3 class="project-name">
             <a :href="project.url">
               {{ project.name }}
@@ -54,10 +59,40 @@ import TypewriterHeading from "../TypewriterHeading.vue";
   margin: 4rem auto;
   text-align: center;
 }
+.project-frame {
+  --mark: var(--color-blueprint-mark);
+  --arm: 14px;
+  position: relative;
+}
+/* crop marks just outside the logo, like an artboard selection */
+.project-frame::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--mark), var(--mark)) top left / var(--arm) 1px,
+    linear-gradient(var(--mark), var(--mark)) top left / 1px var(--arm),
+    linear-gradient(var(--mark), var(--mark)) top right / var(--arm) 1px,
+    linear-gradient(var(--mark), var(--mark)) top right / 1px var(--arm),
+    linear-gradient(var(--mark), var(--mark)) bottom left / var(--arm) 1px,
+    linear-gradient(var(--mark), var(--mark)) bottom left / 1px var(--arm),
+    linear-gradient(var(--mark), var(--mark)) bottom right / var(--arm) 1px,
+    linear-gradient(var(--mark), var(--mark)) bottom right / 1px var(--arm);
+  background-repeat: no-repeat;
+}
 .project-image {
+  display: block;
   max-width: 600px;
   width: 100%;
   border-radius: 0.5rem;
+}
+.project-fig {
+  margin: 1.25rem 0 0;
+  font-family: var(--font-family-monospace);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--color-blueprint-mark);
 }
 p.project-description {
   font-family: var(--font-family-serif);
