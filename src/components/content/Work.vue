@@ -3,6 +3,9 @@ import work from "../../../content/work.json";
 import { slugify } from "../../slugify";
 import TypewriterHeading from "../TypewriterHeading.vue";
 
+// TODO: content/work.json has Xero "Senior Engineer" ending 2021-12 and
+// "Senior Engineer, Design Systems" starting 2022-01. The real month I moved
+// to Design Systems is somewhere in Jan-Mar 2022 and still needs confirming.
 const formatDate = (date: string) =>
   new Date(date).toLocaleString("en-US", {
     month: "short",

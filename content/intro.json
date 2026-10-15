@@ -1,10 +1,10 @@
 {
-  "headline": "Design Systems Engineer",
-  "tagline": "Empowering Design Excellence at Scale: Unleashing Creativity, Enabling Collaboration, and Amplifying Impact",
+  "headline": "Technical Lead",
+  "tagline": "Leading Engineers. Building Design Systems. Delivering at Scale.",
   "description": [
     "Hello 👋 I'm <a href=\"https://frankcongson.com\">Frank</a>.",
-    "I'm a <a href=\"https://linkedin.com/in/fcongson/\">Design Systems Engineer</a>. That tagline above ☝️ is brought to you by <a href=\"https://chat.openai.com/\">ChatGPT 4</a> 🤖.",
-    "I build <a href=\"https://lagom-ui.netlify.app/\">Design Systems</a> with <a href=\"https://github.com/fcongson/lagom-tokens\">Design Tokens</a>. I love enabling the Creators, Consumers, and Contributors of Design Systems to do their best work. I also love building teams through mentoring and leadership.",
-    "Arriving at Design Systems as a profession hasn't been a straightforward journey. It's been over a decade to get to where I am. See how I got here below 👇."
+    "I'm a <a href=\"https://linkedin.com/in/fcongson/\">Technical Lead</a>. That tagline above ☝️ is brought to you by <a href=\"https://claude.ai/\">Claude</a> 🤖.",
+    "I build <a href=\"https://lagom-ui.netlify.app/\">Design Systems</a> with <a href=\"https://github.com/fcongson/lagom-tokens\">Design Tokens</a>, and I've led teams throughout my career. I love enabling the Creators, Consumers, and Contributors of Design Systems to do their best work, and I'm at my best when I'm setting direction, mentoring engineers, and building teams. I also use AI-assisted development daily.",
+    "Arriving here hasn't been a straightforward journey. It's been 17 years of software development, the last 8 in frontend and design systems. See how I got here below 👇."
   ]
 }

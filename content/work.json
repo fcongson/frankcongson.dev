@@ -1,17 +1,37 @@
 {
   "title": "Work Experience",
-  "description": "My professional Design Systems journey in reverse chronological order.",
+  "description": "My professional journey in reverse chronological order.",
   "experienceGroups": [
+    {
+      "subtitle": "The \"People Leadership\" Era 🏕️",
+      "description": [
+        "I'd been leading engineers informally for years, so I stepped into my first official engineering manager role, with engineers reporting to me. I coached a distributed team across Australia, New Zealand, and the UK, and set the direction and cadence they delivered against.",
+        "Together we took Canva's ADA goal from at risk to met, with WCAG 2.1 AA certification and a published VPAT in April 2026. We built the A11y Platform, which cut triage from hours to minutes across 63 teams, and I set the roadmap for what came next."
+      ],
+      "experiences": [
+        {
+          "startDate": "2025-11",
+          "endDate": "2026-10",
+          "current": false,
+          "jobTitle": "Engineering Manager (Team Engineering Lead), Accessibility",
+          "company": "Canva",
+          "companyWebsite": "https://www.canva.com/",
+          "companyLogo": "",
+          "location": "Remote, New Zealand",
+          "details": ""
+        }
+      ]
+    },
     {
       "subtitle": "The \"Design Systems\" Era 🌲",
       "description": [
-        "I found my passion here. Design Systems is where I belong. It perfectly blends my Full Stack distributed systems thinking with scaling visual designs 🙌. There's a lot to grow into within the space. Design Tokens are what I'm diving deeper into at the moment."
+        "I found my passion here. Design Systems is where I belong. It perfectly blends my Full Stack distributed systems thinking with scaling visual designs 🙌. There's a lot to grow into within the space. Design Tokens are where I went deepest. I founded Jarden's Frontend Guild, mentored four engineers at Xero (two were promoted), and directed 12+ contract engineers on a product-wide brand uplift."
       ],
       "experiences": [
         {
           "startDate": "2024-01",
-          "endDate": "",
-          "current": true,
+          "endDate": "2025-10",
+          "current": false,
           "jobTitle": "Lead Engineer, Design Systems",
           "company": "Xero",
           "companyWebsite": "https://www.xero.com/nz/",
@@ -20,10 +40,21 @@
           "details": ""
         },
         {
-          "startDate": "2021-01",
+          "startDate": "2022-01",
           "endDate": "2023-12",
           "current": false,
           "jobTitle": "Senior Engineer, Design Systems",
+          "company": "Xero",
+          "companyWebsite": "https://www.xero.com/nz/",
+          "companyLogo": "",
+          "location": "Wellington, New Zealand",
+          "details": ""
+        },
+        {
+          "startDate": "2021-01",
+          "endDate": "2021-12",
+          "current": false,
+          "jobTitle": "Senior Engineer",
           "company": "Xero",
           "companyWebsite": "https://www.xero.com/nz/",
           "companyLogo": "",
@@ -46,7 +77,7 @@
     {
       "subtitle": "The \"Full Stack\" Era 🪴",
       "description": [
-        "I learned I wanted to be closer to the end user and create the products they interact with. This narrowed my scope to product facing Full Stack roles.",
+        "I learned I wanted to be closer to the end user and create the products they interact with. This narrowed my scope to product facing Full Stack roles. I played a key role in Starbucks' move from a monolith to a service-oriented architecture.",
         "As I spent time in the Full Stack space, I gravitated towards the visual elements and building UIs that scale. This is what led me down the path of Design Systems."
       ],
       "experiences": [
