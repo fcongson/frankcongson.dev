@@ -3,7 +3,23 @@ import projects from "../../../content/projects.json";
 import { slugify } from "../../slugify";
 import Ruler from "../blueprint/Ruler.vue";
 import SectionLabel from "../blueprint/SectionLabel.vue";
+import ThemeChip from "../blueprint/ThemeChip.vue";
+import TokenSpec from "../blueprint/TokenSpec.vue";
 import TypewriterHeading from "../TypewriterHeading.vue";
+
+interface Project {
+  name: string;
+  url: string;
+  description: string;
+  showSpec?: boolean;
+  theme?: { background: string; accent: string };
+}
+
+const projectGroups: {
+  subtitle: string;
+  description: string;
+  projects: Project[];
+}[] = projects.projectGroups;
 </script>
 
 <template>
@@ -18,7 +34,7 @@ import TypewriterHeading from "../TypewriterHeading.vue";
           :type-time="1800"
         />
         <div
-          v-for="(projectGroup, index) in projects.projectGroups"
+          v-for="(projectGroup, index) in projectGroups"
           :key="projectGroup.subtitle"
           class="project-group"
         >
@@ -33,8 +49,14 @@ import TypewriterHeading from "../TypewriterHeading.vue";
               <a :href="project.url">{{ project.name }}</a>
             </h4>
             <p class="project-description" v-html="project.description" />
+            <TokenSpec v-if="project.showSpec" />
+            <ThemeChip
+              v-if="project.theme"
+              :background="project.theme.background"
+              :accent="project.theme.accent"
+            />
           </div>
-          <Ruler v-if="index < projects.projectGroups.length - 1" />
+          <Ruler v-if="index < projectGroups.length - 1" />
         </div>
       </div>
     </section>

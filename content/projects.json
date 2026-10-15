@@ -14,7 +14,8 @@
         {
           "name": "Lagom Tokens",
           "url": "https://github.com/fcongson/lagom-tokens/pkgs/npm/lagom-tokens",
-          "description": "This is a consolidation of the design decisions to support my brands. It provides sensible defaults and feeds into Lagom UI to keep the decisions consistent."
+          "description": "This is a consolidation of the design decisions to support my brands. It provides sensible defaults and feeds into Lagom UI to keep the decisions consistent.",
+          "showSpec": true
         }
       ]
     },
@@ -25,17 +26,29 @@
         {
           "name": "FrankCongson.dev",
           "url": "https://frankcongson.dev",
-          "description": "My Dev & Design Systems focused brand. This site that you're currently looking at. It uses Vue.js rather than React, meaning it doesn't use Lagom UI (my React Component Library). But it's still on brand due to the use of Lagom Tokens."
+          "description": "My Dev & Design Systems focused brand. This site that you're currently looking at. It uses Vue.js rather than React, meaning it doesn't use Lagom UI (my React Component Library). But it's still on brand due to the use of Lagom Tokens.",
+          "theme": {
+            "background": "#111111",
+            "accent": "#626E60"
+          }
         },
         {
           "name": "FrankCongson.com",
           "url": "https://frankcongson.com",
-          "description": "My primary brand and the driving force behind the creation and growth of Lagom Design System. It uses both Lagom UI and Lagom Tokens."
+          "description": "My primary brand and the driving force behind the creation and growth of Lagom Design System. It uses both Lagom UI and Lagom Tokens.",
+          "theme": {
+            "background": "#222222",
+            "accent": "#626E60"
+          }
         },
         {
           "name": "HeyThereEverywhere.com",
           "url": "https://heythereeverywhere.com",
-          "description": "A Travel Blog focused brand that I created with my wife. I built the site using Lagom UI with custom theming to have its unique look while still fitting within the FrankCongson.com brand."
+          "description": "A Travel Blog focused brand that I created with my wife. I built the site using Lagom UI with custom theming to have its unique look while still fitting within the FrankCongson.com brand.",
+          "theme": {
+            "background": "#2B241E",
+            "accent": "#BC5245"
+          }
         }
       ]
     }
