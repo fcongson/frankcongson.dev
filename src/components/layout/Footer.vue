@@ -15,13 +15,13 @@ import { email, site, socials } from "../../../content/contact.json";
     <div id="socials">
       <ul>
         <li>
-          <a v-bind:href="'mailto:' + email">Contact me</a>
+          <a :href="'mailto:' + email">Contact me</a>
         </li>
-        <li v-for="social in socials">
-          <a v-bind:href="social.url">{{ social.name }}</a>
+        <li v-for="social in socials" :key="social.name">
+          <a :href="social.url">{{ social.name }}</a>
         </li>
         <li>
-          <a v-bind:href="site">.COM</a>
+          <a :href="site">.COM</a>
         </li>
       </ul>
     </div>
