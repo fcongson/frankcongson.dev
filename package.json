@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "vite --host 0.0.0.0",
-    "build": "pnpm type-check && vite build",
+    "build": "pnpm type-check && vite build && vite build --ssr src/entry-server.ts --outDir dist-ssr && node scripts/prerender.mjs",
     "serve": "vite preview --host 0.0.0.0",
     "type-check": "vue-tsc --build",
     "lint": "eslint .",

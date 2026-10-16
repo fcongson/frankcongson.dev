@@ -45,6 +45,18 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <noscript>
+      <!-- Without JS the typewriter never types, so show the full headings. -->
+      <style>
+        .typewriter .placeholder {
+          visibility: visible !important;
+        }
+        .typewriter .typed {
+          display: none;
+        }
+      </style>
+    </noscript>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -54,13 +66,6 @@
   </head>
   <body>
     <div id="app"></div>
-    <noscript>
-      <h1>Frank Congson | Technical Lead</h1>
-      <p>
-        Leading Engineers. Building Design Systems. Delivering at Scale. This
-        site needs JavaScript to display its content.
-      </p>
-    </noscript>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

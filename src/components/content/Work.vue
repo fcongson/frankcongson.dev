@@ -12,6 +12,8 @@ const formatDate = (date: string) =>
   new Date(date).toLocaleString("en-US", {
     month: "short",
     year: "numeric",
+    // "2025-11" parses as UTC, so format as UTC too or US viewers see Oct.
+    timeZone: "UTC",
   });
 </script>
 

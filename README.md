@@ -26,11 +26,11 @@ user-level `~/.npmrc`:
 
 ## Scripts
 
-| Command           | Description                     |
-| ----------------- | ------------------------------- |
-| `pnpm start`      | Start the dev server            |
-| `pnpm build`      | Type-check and build to `dist/` |
-| `pnpm serve`      | Preview the production build    |
-| `pnpm lint`       | Lint with ESLint                |
-| `pnpm format`     | Format with Prettier            |
-| `pnpm type-check` | Type-check with vue-tsc         |
+| Command           | Description                                |
+| ----------------- | ------------------------------------------ |
+| `pnpm start`      | Start the dev server                       |
+| `pnpm build`      | Type-check, build and prerender to `dist/` |
+| `pnpm serve`      | Preview the production build               |
+| `pnpm lint`       | Lint with ESLint                           |
+| `pnpm format`     | Format with Prettier                       |
+| `pnpm type-check` | Type-check with vue-tsc                    |
