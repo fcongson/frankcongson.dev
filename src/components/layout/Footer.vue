@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { email, site, socials } from "../../../content/contact.json";
+import { email, name, site, socials } from "../../../content/contact.json";
+
+const year = new Date().getFullYear();
 </script>
 
 <template>
@@ -25,6 +27,7 @@ import { email, site, socials } from "../../../content/contact.json";
         </li>
       </ul>
     </div>
+    <small class="copyright">Copyright © {{ year }} {{ name }}</small>
   </footer>
 </template>
 
@@ -55,7 +58,15 @@ div#logo {
 div#socials {
   width: 100%;
   max-width: 400px;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
+}
+.copyright {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: var(--font-family-monospace);
+  font-size: max(0.6875rem, 11px);
+  color: var(--lagom-core-colors-olive-lighter20);
 }
 ul {
   display: flex;
