@@ -5,11 +5,10 @@ import projects from "../../../content/projects.json";
 import work from "../../../content/work.json";
 import writing from "../../../content/writing.json";
 import { slugify } from "../../slugify";
+import RegistrationMarks from "../blueprint/RegistrationMarks.vue";
 import Ruler from "../blueprint/Ruler.vue";
 import SectionLabel from "../blueprint/SectionLabel.vue";
 import TypewriterHeading from "../TypewriterHeading.vue";
-
-const corners = ["top-left", "top-right", "bottom-left", "bottom-right"];
 
 const sections = [work, projects, writing, community].map(({ title }) => ({
   title,
@@ -18,19 +17,8 @@ const sections = [work, projects, writing, community].map(({ title }) => ({
 </script>
 
 <template>
-  <div class="hero">
-    <svg
-      v-for="corner in corners"
-      :key="corner"
-      class="registration-mark"
-      :class="corner"
-      viewBox="0 0 18 18"
-      fill="none"
-      stroke="currentColor"
-      aria-hidden="true"
-    >
-      <path d="M9 0v18M0 9h18" />
-    </svg>
+  <div class="hero blueprint-grid">
+    <RegistrationMarks />
     <section>
       <div class="container">
         <SectionLabel index="00" label="intro" />
@@ -70,48 +58,8 @@ const sections = [work, projects, writing, community].map(({ title }) => ({
 
 <style scoped>
 .hero {
-  position: relative;
   width: 100vw;
   display: flow-root;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: radial-gradient(
-    circle,
-    var(--color-blueprint-grid) 1px,
-    transparent 1.6px
-  );
-  background-size: 24px 24px;
-  background-position: 12px 12px;
-  mask-image: linear-gradient(to bottom, #000 40%, transparent 95%);
-}
-.hero > section {
-  position: relative;
-}
-.registration-mark {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  color: var(--color-blueprint-mark);
-}
-.registration-mark.top-left {
-  top: 12px;
-  left: 12px;
-}
-.registration-mark.top-right {
-  top: 12px;
-  right: 12px;
-}
-.registration-mark.bottom-left {
-  bottom: 12px;
-  left: 12px;
-}
-.registration-mark.bottom-right {
-  right: 12px;
-  bottom: 12px;
 }
 .headline {
   position: relative;

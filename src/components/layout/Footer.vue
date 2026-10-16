@@ -3,7 +3,7 @@ import { email, site, socials } from "../../../content/contact.json";
 </script>
 
 <template>
-  <footer>
+  <footer class="blueprint-grid">
     <div id="logo">
       <img
         alt="Frank Congson logo"
@@ -38,30 +38,13 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: radial-gradient(
-    circle,
-    color-mix(
-        in srgb,
-        var(--lagom-core-colors-olive-lighter20) 34%,
-        transparent
-      )
-      1px,
-    transparent 1.6px
+  /* the footer stays dark in light mode, so pin the grid color and fade */
+  --color-blueprint-grid: color-mix(
+    in srgb,
+    var(--lagom-core-colors-olive-lighter20) 34%,
+    transparent
   );
-  background-size: 24px 24px;
-  background-position: 12px 12px;
-  mask-image: linear-gradient(to top, transparent 5%, #000 90%);
-}
-div#logo,
-div#socials {
-  position: relative;
+  --blueprint-grid-mask: linear-gradient(to top, transparent 5%, #000 90%);
 }
 div#logo {
   height: 128px;
