@@ -16,17 +16,22 @@
 
   --layout-max-width: 800px;
 
-  --color-foreground: var(--fern-grey-95);
-  --color-background: var(--fern-grey-5);
+  /*
+   * Colours come from Fern's roles where one exists. The theme (light or dark)
+   * is set on <html> by data-lagom-theme, see the script in index.html. The
+   * section and blueprint hues have no role, so they use Fern palette stops.
+   */
+  --color-foreground: var(--lagom-semantic-color-fg-default);
+  --color-background: var(--lagom-semantic-color-bg-default);
 
-  --color-section-background: var(--fern-grey-15);
-  --color-section-background-olive: var(--fern-olive-20);
-  --color-section-background-navy: var(--fern-navy-10);
-  --color-section-background-violet: var(--fern-violet-10);
+  --color-section-background: var(--lagom-semantic-color-bg-secondary);
+  --color-section-background-olive: var(--fern-olive-85);
+  --color-section-background-navy: var(--fern-navy-75);
+  --color-section-background-violet: var(--fern-violet-60);
 
-  --color-border: var(--fern-olive-45);
-  --color-border-on-hover: var(--fern-olive-85);
-  --color-border-on-hover-on-color-bg: var(--fern-grey-75);
+  --color-border: var(--lagom-semantic-color-border-secondary);
+  --color-border-on-hover: var(--lagom-semantic-color-border-default);
+  --color-border-on-hover-on-color-bg: var(--lagom-semantic-color-fg-tertiary);
 
   --color-border-on-color-bg: var(--fern-olive-65);
   --color-border-on-navy-bg: var(--fern-navy-50);
@@ -36,8 +41,8 @@
   --color-container-background: var(--color-section-background-olive);
   --color-border-on-container-background: var(--color-border-on-color-bg);
 
-  --color-blueprint-line: var(--fern-olive-45);
-  --color-blueprint-mark: var(--fern-olive-65);
+  --color-blueprint-line: var(--fern-olive-65);
+  --color-blueprint-mark: var(--fern-olive-45);
   --color-blueprint-grid: color-mix(
     in srgb,
     var(--color-blueprint-mark) 34%,
@@ -135,26 +140,29 @@ h3 {
   line-height: 1.8125rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-foreground: var(--fern-grey-15);
-    --color-background: var(--fern-grey-100);
+:root[data-lagom-theme~="dark"] {
+  --color-foreground: var(--lagom-semantic-color-fg-default);
+  /* Deliberately darker than Fern's dark bg-default (grey-15) */
+  --color-background: var(--fern-grey-5);
 
-    --color-section-background: var(--fern-grey-95);
-    --color-section-background-olive: var(--fern-olive-85);
-    --color-section-background-navy: var(--fern-navy-75);
-    --color-section-background-violet: var(--fern-violet-60);
+  --color-section-background: var(--lagom-semantic-color-bg-default);
+  --color-section-background-olive: var(--fern-olive-20);
+  --color-section-background-navy: var(--fern-navy-10);
+  --color-section-background-violet: var(--fern-violet-10);
 
-    --color-border: var(--fern-olive-85);
-    --color-border-on-hover: var(--fern-grey-35);
-    --color-border-on-hover-on-color-bg: var(--fern-grey-35);
+  --color-border: var(--lagom-semantic-color-accent-default);
+  --color-border-on-hover: var(--lagom-semantic-color-border-default);
 
-    --color-border-on-color-bg: var(--fern-olive-65);
-    --color-border-on-navy-bg: var(--fern-navy-50);
-    --color-border-on-olive-bg: var(--fern-olive-65);
-    --color-border-on-violet-bg: var(--fern-violet-40);
+  --color-blueprint-line: var(--fern-olive-45);
+  --color-blueprint-mark: var(--fern-olive-65);
+}
 
-    --color-blueprint-line: var(--fern-olive-65);
-    --color-blueprint-mark: var(--fern-olive-45);
-  }
+:focus-visible {
+  outline: var(--lagom-semantic-focus-ring-width) solid
+    var(--lagom-semantic-color-focus-ring);
+  outline-offset: 0.25em;
+}
+
+::selection {
+  background-color: var(--lagom-semantic-color-selection-bg);
 }
