@@ -1,14 +1,21 @@
 <script setup lang="ts">
-defineProps<{
+const { brand } = defineProps<{
+  brand: "fern" | "waypoint";
   background: string;
   accent: string;
 }>();
 
-const roles = [
-  ["primary", "var(--lagom-core-colors-olive-base)"],
-  ["secondary", "var(--lagom-core-colors-navy-base)"],
-  ["tertiary", "var(--lagom-core-colors-violet-base)"],
-] as const;
+// Each brand's primary, secondary and tertiary palette hues, as the brand
+// package defines them. Waypoint's palette is loaded in style.css.
+const brandRoles = {
+  fern: ["olive-45", "navy-35", "violet-20"],
+  waypoint: ["brick-45", "sage-45", "sand-45"],
+} as const;
+const roleNames = ["primary", "secondary", "tertiary"] as const;
+const roles = roleNames.map(
+  (name, index) =>
+    [name, `var(--${brand}-${brandRoles[brand][index]})`] as const,
+);
 </script>
 
 <template>

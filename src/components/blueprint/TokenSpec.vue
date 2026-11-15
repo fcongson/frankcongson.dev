@@ -1,34 +1,30 @@
 <script setup lang="ts">
-import coreCss from "@fcongson/lagom-tokens/css/variables/_core.css?raw";
+import fernPalette from "@fcongson/lagom-brands/fern/css/palette.css?raw";
 import { onMounted, reactive, useTemplateRef } from "vue";
 import Ruler from "./Ruler.vue";
 
 const hues = ["grey", "olive", "navy", "violet", "honey", "red"];
-const shades = [
-  ["darker40", "-40"],
-  ["darker35", "-35"],
-  ["darker30", "-30"],
-  ["darker20", "-20"],
-  ["darker10", "-10"],
-  ["darker5", "-5"],
-  ["base", "base"],
-  ["lighter20", "+20"],
-  ["lighter40", "+40"],
-] as const;
+// Tone stops are CIELAB lightness: 5 to 95 in fives, 98, and 100 (white,
+// neutral families only).
+const stops = [
+  ...Array.from({ length: 19 }, (_, index) => (index + 1) * 5),
+  98,
+  100,
+];
 
 // Read the ladders straight from the package so this stays in step with it.
 const available = new Set(
   Array.from(
-    coreCss.matchAll(/--lagom-core-colors-([a-z]+)-([a-z0-9]+):/g),
-    ([, hue, shade]) => `${hue}-${shade}`,
+    fernPalette.matchAll(/--fern-([a-z]+)-(\d+):/g),
+    ([, hue, stop]) => `${hue}-${stop}`,
   ),
 );
 const ladders = hues.map((hue) => ({
   hue,
-  swatches: shades.map(([shade]) => ({
-    shade,
-    token: `--lagom-core-colors-${hue}-${shade}`,
-    present: available.has(`${hue}-${shade}`),
+  swatches: stops.map((stop) => ({
+    stop,
+    token: `--fern-${hue}-${stop}`,
+    present: available.has(`${hue}-${stop}`),
   })),
 }));
 
@@ -58,19 +54,21 @@ onMounted(() => {
 
 <template>
   <div ref="root" class="token-spec" aria-hidden="true">
-    <Ruler start-label="lagom-tokens" end-label="core" />
+    <Ruler start-label="lagom-brands" end-label="fern" />
 
     <div class="block">
       <h5>color</h5>
       <div class="ladder head">
         <span />
-        <span v-for="[shade, label] in shades" :key="shade">{{ label }}</span>
+        <span v-for="stop in stops" :key="stop">{{
+          stop % 10 === 5 ? stop : ""
+        }}</span>
       </div>
       <div v-for="ladder in ladders" :key="ladder.hue" class="ladder">
         <span class="hue">{{ ladder.hue }}</span>
         <span
           v-for="swatch in ladder.swatches"
-          :key="swatch.shade"
+          :key="swatch.stop"
           class="swatch"
           :class="{ missing: !swatch.present }"
           :style="
@@ -155,10 +153,10 @@ h5 {
 
 .ladder {
   display: grid;
-  grid-template-columns: 3.5rem repeat(9, 1fr);
-  gap: 4px;
+  grid-template-columns: 3.5rem repeat(21, 1fr);
+  gap: 2px;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 .ladder.head span {
   font-size: 0.5625rem;

@@ -12,14 +12,20 @@ interface Project {
   url: string;
   description: string;
   showSpec?: boolean;
-  theme?: { background: string; accent: string };
+  theme?: {
+    brand: "fern" | "waypoint";
+    background: string;
+    accent: string;
+  };
 }
 
-const projectGroups: {
+interface ProjectGroup {
   subtitle: string;
   description: string;
   projects: Project[];
-}[] = projects.projectGroups;
+}
+
+const projectGroups: ProjectGroup[] = projects.projectGroups as ProjectGroup[];
 </script>
 
 <template>
@@ -52,6 +58,7 @@ const projectGroups: {
             <TokenSpec v-if="project.showSpec" />
             <ThemeChip
               v-if="project.theme"
+              :brand="project.theme.brand"
               :background="project.theme.background"
               :accent="project.theme.accent"
             />

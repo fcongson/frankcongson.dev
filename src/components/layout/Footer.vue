@@ -35,8 +35,8 @@ const year = new Date().getFullYear();
 footer {
   font-size: max(0.75rem, 12px);
   width: 100vw;
-  /* border-top: 0.5px solid var(--lagom-core-colors-grey-darker20); */
-  background-color: var(--lagom-core-colors-grey-darker40);
+  /* border-top: 0.5px solid var(--fern-grey-35); */
+  background-color: var(--fern-grey-15);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +44,7 @@ footer {
   /* the footer stays dark in light mode, so pin the grid color and fade */
   --color-blueprint-grid: color-mix(
     in srgb,
-    var(--lagom-core-colors-olive-lighter20) 34%,
+    var(--fern-olive-65) 34%,
     transparent
   );
   --blueprint-grid-mask: linear-gradient(to top, transparent 5%, #000 90%);
@@ -66,7 +66,7 @@ div#socials {
   text-align: center;
   font-family: var(--font-family-monospace);
   font-size: max(0.6875rem, 11px);
-  color: var(--lagom-core-colors-olive-lighter20);
+  color: var(--fern-olive-65);
 }
 ul {
   display: flex;
@@ -77,10 +77,10 @@ ul {
   margin: 0;
 }
 a {
-  color: var(--lagom-core-colors-grey-lighter40);
-  border-bottom-color: var(--lagom-core-colors-olive-darker20);
+  color: var(--fern-grey-95);
+  border-bottom-color: var(--fern-olive-20);
 }
 a:hover {
-  border-bottom-color: var(--lagom-core-colors-olive-lighter40);
+  border-bottom-color: var(--fern-olive-85);
 }
 </style>
