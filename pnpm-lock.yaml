@@ -166,9 +166,12 @@ importers:
 
   .:
     dependencies:
-      '@fcongson/lagom-tokens':
+      '@fcongson/lagom-brands':
         specifier: ^1.0.0
-        version: 1.0.0
+        version: 1.0.0(@fcongson/lagom-tokens@2.0.0)
+      '@fcongson/lagom-tokens':
+        specifier: ^2.0.0
+        version: 2.0.0
       vue:
         specifier: ^3.5.44
         version: 3.5.44(typescript@6.0.3)
@@ -283,9 +286,14 @@ packages:
     resolution: {integrity: sha512-IkO+/KEUvwbVpiURZg+P7zF74z5Jxe0UgJxVni+RtoHQ6IZieXaO02kmadomap/q+l6bc/jdPGGqTjhuZnuz1Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@fcongson/lagom-tokens@1.0.0':
-    resolution: {integrity: sha512-jrf8oxenOmclmIHW/khOj9CAkSwXcQs1SRtgNL5TrOtlp/xOfqhye/Y068O/qlFLi44jo6gicdfnUsZTgUnU9w==, tarball: https://npm.pkg.github.com/download/@fcongson/lagom-tokens/1.0.0/7f22fe87dfd6bd7b6481a840c8c610de78e6a549}
-    engines: {node: '>=22.0.0'}
+  '@fcongson/lagom-brands@1.0.0':
+    resolution: {integrity: sha512-GKEz0g4oJAJ4cJ2co4+yLgVqCTZmxHFGG9Bf1ux5GgeQzgsD9cDTLRQJ3IIHBXXZ6LNOyNqN9foe6g4QO1Xkxw==, tarball: https://npm.pkg.github.com/download/@fcongson/lagom-brands/1.0.0/b2fb3fb4bc241ab52dfa789fa7805cd7c65c9ff8}
+    peerDependencies:
+      '@fcongson/lagom-tokens': ^2.0.0
+
+  '@fcongson/lagom-tokens@2.0.0':
+    resolution: {integrity: sha512-wkFT6IGNGDUxHff8LH9njd79JzuP1Vb1cKgZ8q5YXhGVuMM7hrvI1UFkDlIOskPVD7qAmjfRx7tgNZvERotODg==, tarball: https://npm.pkg.github.com/download/@fcongson/lagom-tokens/2.0.0/3a2bb3613bd358df1ebc0f1b434be7c18aad3e66}
+    hasBin: true
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -1246,7 +1254,11 @@ snapshots:
       '@eslint/core': 1.2.1
       levn: 0.4.1
 
-  '@fcongson/lagom-tokens@1.0.0': {}
+  '@fcongson/lagom-brands@1.0.0(@fcongson/lagom-tokens@2.0.0)':
+    dependencies:
+      '@fcongson/lagom-tokens': 2.0.0
+
+  '@fcongson/lagom-tokens@2.0.0': {}
 
   '@humanfs/core@0.19.2':
     dependencies:

@@ -17,7 +17,8 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@fcongson/lagom-tokens": "^1.0.0",
+    "@fcongson/lagom-brands": "^1.0.0",
+    "@fcongson/lagom-tokens": "^2.0.0",
     "vue": "^3.5.44"
   },
   "devDependencies": {

@@ -1,4 +1,7 @@
-@import url("@fcongson/lagom-tokens/css/variables/_core.css");
+@import url("@fcongson/lagom-tokens/css/lagom.css");
+@import url("@fcongson/lagom-brands/fern/css/fern.css");
+/* Waypoint's palette alone, for the brand chips in Projects */
+@import url("@fcongson/lagom-brands/waypoint/css/palette.css");
 
 @font-face {
   font-family: "silkamono";
@@ -13,28 +16,28 @@
 
   --layout-max-width: 800px;
 
-  --color-foreground: var(--lagom-core-colors-grey-lighter40);
-  --color-background: var(--lagom-core-colors-black);
+  --color-foreground: var(--fern-grey-95);
+  --color-background: var(--fern-grey-5);
 
-  --color-section-background: var(--lagom-core-colors-grey-darker40);
-  --color-section-background-olive: var(--lagom-core-colors-olive-darker20);
-  --color-section-background-navy: var(--lagom-core-colors-navy-darker20);
-  --color-section-background-violet: var(--lagom-core-colors-violet-darker10);
+  --color-section-background: var(--fern-grey-15);
+  --color-section-background-olive: var(--fern-olive-20);
+  --color-section-background-navy: var(--fern-navy-10);
+  --color-section-background-violet: var(--fern-violet-10);
 
-  --color-border: var(--lagom-core-colors-olive-base);
-  --color-border-on-hover: var(--lagom-core-colors-olive-lighter40);
-  --color-border-on-hover-on-color-bg: var(--lagom-core-colors-grey-lighter20);
+  --color-border: var(--fern-olive-45);
+  --color-border-on-hover: var(--fern-olive-85);
+  --color-border-on-hover-on-color-bg: var(--fern-grey-75);
 
-  --color-border-on-color-bg: var(--lagom-core-colors-olive-lighter20);
-  --color-border-on-navy-bg: var(--lagom-core-colors-navy-lighter20);
-  --color-border-on-olive-bg: var(--lagom-core-colors-olive-lighter20);
-  --color-border-on-violet-bg: var(--lagom-core-colors-violet-lighter20);
+  --color-border-on-color-bg: var(--fern-olive-65);
+  --color-border-on-navy-bg: var(--fern-navy-50);
+  --color-border-on-olive-bg: var(--fern-olive-65);
+  --color-border-on-violet-bg: var(--fern-violet-40);
 
   --color-container-background: var(--color-section-background-olive);
   --color-border-on-container-background: var(--color-border-on-color-bg);
 
-  --color-blueprint-line: var(--lagom-core-colors-olive-base);
-  --color-blueprint-mark: var(--lagom-core-colors-olive-lighter20);
+  --color-blueprint-line: var(--fern-olive-45);
+  --color-blueprint-mark: var(--fern-olive-65);
   --color-blueprint-grid: color-mix(
     in srgb,
     var(--color-blueprint-mark) 34%,
@@ -134,26 +137,24 @@ h3 {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-foreground: var(--lagom-core-colors-grey-darker40);
-    --color-background: var(--lagom-core-colors-white);
+    --color-foreground: var(--fern-grey-15);
+    --color-background: var(--fern-grey-100);
 
-    --color-section-background: var(--lagom-core-colors-grey-lighter40);
-    --color-section-background-olive: var(--lagom-core-colors-olive-lighter40);
-    --color-section-background-navy: var(--lagom-core-colors-navy-lighter40);
-    --color-section-background-violet: var(
-      --lagom-core-colors-violet-lighter40
-    );
+    --color-section-background: var(--fern-grey-95);
+    --color-section-background-olive: var(--fern-olive-85);
+    --color-section-background-navy: var(--fern-navy-75);
+    --color-section-background-violet: var(--fern-violet-60);
 
-    --color-border: var(--lagom-core-colors-olive-lighter40);
-    --color-border-on-hover: var(--lagom-core-colors-grey-darker20);
-    --color-border-on-hover-on-color-bg: var(--lagom-core-colors-grey-darker20);
+    --color-border: var(--fern-olive-85);
+    --color-border-on-hover: var(--fern-grey-35);
+    --color-border-on-hover-on-color-bg: var(--fern-grey-35);
 
-    --color-border-on-color-bg: var(--lagom-core-colors-olive-lighter20);
-    --color-border-on-navy-bg: var(--lagom-core-colors-navy-lighter20);
-    --color-border-on-olive-bg: var(--lagom-core-colors-olive-lighter20);
-    --color-border-on-violet-bg: var(--lagom-core-colors-violet-lighter20);
+    --color-border-on-color-bg: var(--fern-olive-65);
+    --color-border-on-navy-bg: var(--fern-navy-50);
+    --color-border-on-olive-bg: var(--fern-olive-65);
+    --color-border-on-violet-bg: var(--fern-violet-40);
 
-    --color-blueprint-line: var(--lagom-core-colors-olive-lighter20);
-    --color-blueprint-mark: var(--lagom-core-colors-olive-base);
+    --color-blueprint-line: var(--fern-olive-65);
+    --color-blueprint-mark: var(--fern-olive-45);
   }
 }
