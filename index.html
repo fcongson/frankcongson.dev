@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-lagom-brand="fern">
+<html lang="en" data-lagom-brand="fern" data-lagom-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +9,20 @@
       content="Frank Congson is a Technical Lead in New Zealand with 17 years in software development, the last 8 in frontend and design systems."
     />
     <meta name="author" content="Frank Congson" />
+    <script>
+      // Fern's roles switch on data-lagom-theme, not prefers-color-scheme.
+      // Run before first paint. Without JS the page stays dark.
+      (function () {
+        var query = matchMedia("(prefers-color-scheme: light)");
+        function apply() {
+          document.documentElement.dataset.lagomTheme = query.matches
+            ? "light"
+            : "dark";
+        }
+        apply();
+        query.addEventListener("change", apply);
+      })();
+    </script>
     <link rel="canonical" href="%SITE_URL%/" />
 
     <meta
